@@ -8,8 +8,9 @@ public class move_enemy : MonoBehaviour
     public float ver_speed = 3f;
     public float speed = 2f;
     public float HP = 3f;
-    public GameObject enemy_bullet;
     public float shooting_speed = 3f;
+    public ParticleSystem explosion;
+    public GameObject enemy_bullet;
 
     private GameObject hitted_by;
     private float time;
@@ -98,6 +99,7 @@ public class move_enemy : MonoBehaviour
 
         if (HP <= 0)
         {
+            Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
