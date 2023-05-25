@@ -21,11 +21,16 @@ public class shoot : MonoBehaviour
     }
     private void Shoot()
     {
+        Transform barl = transform.GetChild(1);
         time += Time.deltaTime * attack_speed;
 
         if (time >= 1)
         {
-            Instantiate(projectile, transform.position, new Quaternion(0, 0, 0, 0));
+
+            Instantiate(projectile, new Vector3(
+                barl.transform.position.x,
+                barl.transform.position.y,
+                barl.transform.position.z - .35f), new Quaternion(0, 0, 0, 0));
             time = 0;
         }
     }

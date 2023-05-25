@@ -24,8 +24,6 @@ public class move_enemy : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         stop = Random.Range(2, 6);
 
-        
-
     }
 
     // Update is called once per frame

@@ -69,12 +69,15 @@ public class Moving : MonoBehaviour
 
         if ((-0.5 < move_x && move_x < .5) && (-0.5 < move_z && move_z < .5)) move_rotate = 10f;
         else move_rotate = 2f;
-
-
+        
 
         if (move_hori >= .1 || move_hori <= -.1 || move_ver >= .1 || move_ver <= -.1)
         {
             transform.rotation = new Quaternion(-move_ver, move_hori * .5f, move_hori, -50);
+        }
+        else
+        {
+            move_rotate = 2f; 
         }
 
     }
