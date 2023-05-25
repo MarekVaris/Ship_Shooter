@@ -8,23 +8,21 @@ public class move_enemy : MonoBehaviour
     public float ver_speed = 3f;
     public float speed = 2f;
     public float HP = 3f;
-    public float shooting_speed = 3f;
     public ParticleSystem explosion;
-    public GameObject enemy_bullet;
+
 
     private GameObject hitted_by;
-    private float time;
     private float move_hori = 1f;
-    private int swap;
     private int left = 0;
     private int stop = 0;
+    private health health_bar;
     Rigidbody rb;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         stop = Random.Range(2, 6);
-
+        health_bar = GetComponentInChildren<health>();
     }
 
     // Update is called once per frame
@@ -32,35 +30,6 @@ public class move_enemy : MonoBehaviour
     {
         destroy_when();
         Move();
-        Shoot();
-    }
-    private void Shoot()
-    {
-        Transform gun1 = transform.GetChild(1);
-        Transform gun2 = transform.GetChild(2);
-
-        time += Time.deltaTime * shooting_speed;
-
-        if (time > 30)
-        {
-            if (swap == 1)
-            {
-                Instantiate(enemy_bullet, new Vector3(
-                    gun1.transform.position.x,
-                    gun1.transform.position.y,
-                    gun1.transform.position.z + .2f), Quaternion.identity);
-                swap = 0;
-            }
-            else
-            {
-                Instantiate(enemy_bullet, new Vector3(
-                    gun2.transform.position.x,
-                    gun2.transform.position.y,
-                    gun2.transform.position.z + .2f), Quaternion.identity);
-                swap = 1;
-            }
-            time = 0;
-        }
     }
     private void Move()
     {
@@ -110,6 +79,7 @@ public class move_enemy : MonoBehaviour
         {
             hitted_by = other.gameObject;
             HP -= 1;
+            health_bar.Health_bar(HP);
             Destroy(other.gameObject);
         }
     }

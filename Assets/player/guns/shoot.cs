@@ -7,6 +7,7 @@ public class shoot : MonoBehaviour
     public float attack_speed = 2f;
     public GameObject projectile;
 
+    private int swap;
     private float time;
     // Start is called before the first frame update
     void Start()
