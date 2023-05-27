@@ -12,7 +12,7 @@ public class health : MonoBehaviour
         enemy_helth = GetComponentInParent<move_enemy>();
         slider.maxValue = enemy_helth.HP;
         slider.value = enemy_helth.HP;
-        gameObject.active = false;
+        gameObject.SetActive(false);
     }
 
     void Update()
@@ -22,7 +22,7 @@ public class health : MonoBehaviour
 
     public void Health_bar(float hp)
     {
-        gameObject.active = true;
+        gameObject.SetActive (true);
         slider.value = hp;
     }
 }

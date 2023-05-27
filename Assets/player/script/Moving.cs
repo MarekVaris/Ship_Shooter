@@ -9,7 +9,9 @@ public class Moving : MonoBehaviour
 {
     public int HP = 10;
     public float speed = 3f;
-    public float rotatnion_speed = 3f;
+    public float move_rotate = 2f;
+    public game_over_scene GameOver;
+    public Hp_Player Ui_Hp_Player;
 
     private GameObject hitted_by;
     private float move_x;
@@ -17,21 +19,25 @@ public class Moving : MonoBehaviour
     private float move_hori = 0.1f;
     private float move_ver = 0.1f;
 
-    public float move_rotate = 2f;
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
+        if (HP <= 0)
+        {
+            Game_over();
+        }
+        else
+        {
             move_x = Input.GetAxis("Horizontal");
             move_z = Input.GetAxis("Vertical");
             Move();
-            Game_over();
+        }
 
+        
     }
 
     private void Move()
@@ -52,8 +58,8 @@ public class Moving : MonoBehaviour
 
         }
 
-        move_hori -= Time.deltaTime * move_x * move_rotate * rotatnion_speed;
-        move_ver -= Time.deltaTime * move_z * move_rotate * rotatnion_speed;
+        move_hori -= Time.deltaTime * move_x * move_rotate * speed;
+        move_ver -= Time.deltaTime * move_z * move_rotate * speed;
 
         if (move_hori > 0) move_hori -= Time.deltaTime * move_rotate;
         else if (move_hori < 0) move_hori += Time.deltaTime * move_rotate;
@@ -84,7 +90,8 @@ public class Moving : MonoBehaviour
 
     private void Game_over()
     {
-
+        GameOver.Setup();
+        Destroy(gameObject);
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -93,6 +100,7 @@ public class Moving : MonoBehaviour
         {
             hitted_by = other.gameObject;
             HP -= 1;
+            Ui_Hp_Player.Update_Hp(HP);
             Destroy(other.gameObject);
         }
     }
