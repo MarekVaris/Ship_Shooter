@@ -1647,10 +1647,6 @@ PrefabInstance:
       value: player_ship
       objectReference: {fileID: 0}
     - target: {fileID: 5544427248655556713, guid: 30cbc1926b046494288562460639f898, type: 3}
-      propertyPath: HP
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5544427248655556713, guid: 30cbc1926b046494288562460639f898, type: 3}
       propertyPath: GameOver
       value: 
       objectReference: {fileID: 2112959162}

@@ -4853,10 +4853,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1133578222092446733}
-  - component: {fileID: 5544427248655556713}
-  - component: {fileID: 7802795446137880993}
   - component: {fileID: 1584330509}
   - component: {fileID: 68177838}
+  - component: {fileID: 5544427248655556713}
+  - component: {fileID: 7802795446137880993}
   m_Layer: 0
   m_Name: player_ship
   m_TagString: Untagged
@@ -4881,38 +4881,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5544427248655556713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5508125198471061462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 262b556ff4fa276469a04e1d9026ca5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HP: 2
-  speed: 5
-  rotatnion_speed: 3
-  GameOver: {fileID: 0}
-  move_rotate: 2
---- !u!114 &7802795446137880993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5508125198471061462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eda45cf7bca12534ea33979cbb9985f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parent_obj: {fileID: 4904626227333975842}
-  gun1_obj: {fileID: 5127382492146912836, guid: e78857879970cbc4bbf5f003ce6520a7, type: 3}
-  gun2_obj: {fileID: 5127382492146912836, guid: e78857879970cbc4bbf5f003ce6520a7, type: 3}
 --- !u!54 &1584330509
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4950,6 +4918,40 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5544427248655556713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5508125198471061462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 262b556ff4fa276469a04e1d9026ca5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 10
+  speed: 5
+  move_rotate: 2
+  GameOver: {fileID: 0}
+  Ui_Hp_Player: {fileID: 0}
+--- !u!114 &7802795446137880993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5508125198471061462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda45cf7bca12534ea33979cbb9985f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent_obj: {fileID: 4904626227333975842}
+  gun1_obj: {fileID: 5127382492146912836, guid: e78857879970cbc4bbf5f003ce6520a7, type: 3}
+  gun2_obj: {fileID: 5127382492146912836, guid: e78857879970cbc4bbf5f003ce6520a7, type: 3}
+  gun3_obj: {fileID: 5127382492146912836, guid: e78857879970cbc4bbf5f003ce6520a7, type: 3}
+  gun4_obj: {fileID: 5127382492146912836, guid: e78857879970cbc4bbf5f003ce6520a7, type: 3}
 --- !u!1001 &5247206215334982259
 PrefabInstance:
   m_ObjectHideFlags: 0

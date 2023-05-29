@@ -1,24 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class shoot : MonoBehaviour
 {
     public float attack_speed = 2f;
     public GameObject projectile;
 
-    private int swap;
     private float time;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Scene currentScene = SceneManager.GetActiveScene();
+        if (currentScene.name == "Menu")
+        {
+            this.enabled = false;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+
         Shoot();
+
     }
     private void Shoot()
     {
