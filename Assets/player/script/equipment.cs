@@ -40,7 +40,7 @@ public class equipment : MonoBehaviour
         if (gun3_obj != null)
         {
             Transform location = parent_obj.transform.GetChild(2);
-            GameObject gun = Instantiate(gun1_obj, new Vector3(
+            GameObject gun = Instantiate(gun3_obj, new Vector3(
                 location.transform.position.x + .02f,
                 location.transform.position.y + .05f,
                 location.transform.position.z),
@@ -52,7 +52,7 @@ public class equipment : MonoBehaviour
         if (gun4_obj != null)
         {
             Transform location = parent_obj.transform.GetChild(3);
-            GameObject gun = Instantiate(gun2_obj, new Vector3(
+            GameObject gun = Instantiate(gun4_obj, new Vector3(
                 location.transform.position.x - .02f,
                 location.transform.position.y + .05f,
                 location.transform.position.z),

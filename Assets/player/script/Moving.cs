@@ -12,6 +12,8 @@ public class Moving : MonoBehaviour
     public float move_rotate = 2f;
     public game_over_scene GameOver;
     public Hp_Player Ui_Hp_Player;
+    public ParticleSystem Dead_explosion;
+
 
     private GameObject hitted_by;
     private float move_x;
@@ -91,6 +93,7 @@ public class Moving : MonoBehaviour
     private void Game_over()
     {
         GameOver.Setup();
+        Instantiate(Dead_explosion, transform.position, Dead_explosion.transform.rotation);
         Destroy(gameObject);
     }
     private void OnTriggerEnter(Collider other)
