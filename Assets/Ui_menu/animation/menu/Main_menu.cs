@@ -5,9 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class Main_menu : MonoBehaviour
 {
+    public Animator Camera_animation;
+    public Animator Ui_MainMenu;
+    public Animator Ui_Shop;
     public void Start_game()
     {
-        SceneManager.LoadScene("Game");
+        Ui_Shop.SetBool("Ui_Shop", true);
+        Ui_MainMenu.SetBool("Ui_menu", false);
+        Camera_animation.SetBool("shop", true);
+        Camera_animation.SetBool("menu", false);
     }
 
     public void Settings()

@@ -13,7 +13,7 @@ public class shoot : MonoBehaviour
     void Start()
     {
         Scene currentScene = SceneManager.GetActiveScene();
-        if (currentScene.name == "Menu")
+        if (currentScene.name != "Game")
         {
             this.enabled = false;
         }

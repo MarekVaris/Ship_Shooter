@@ -6,17 +6,14 @@ using static UnityEditor.FilePathAttribute;
 public class equipment : MonoBehaviour
 {
     public GameObject parent_obj;
-    public GameObject gun1_obj;
-    public GameObject gun2_obj;
-    public GameObject gun3_obj;
-    public GameObject gun4_obj;
+    public GameObject[] gun_obj;
     // Start is called before the first frame update
     void Start()
     {
-        if (gun1_obj != null)
+        if (gun_obj[0] != null)
         {
             Transform location = parent_obj.transform.GetChild(0);
-            GameObject gun = Instantiate(gun1_obj, new Vector3(
+            GameObject gun = Instantiate(gun_obj[0], new Vector3(
                 location.transform.position.x + .03f,
                 location.transform.position.y,
                 location.transform.position.z),
@@ -25,10 +22,10 @@ public class equipment : MonoBehaviour
             gun.transform.SetParent(location.transform);
         }
 
-        if (gun2_obj != null)
+        if (gun_obj[1] != null)
         {
             Transform location = parent_obj.transform.GetChild(1);
-            GameObject gun = Instantiate(gun2_obj, new Vector3(
+            GameObject gun = Instantiate(gun_obj[1], new Vector3(
                 location.transform.position.x - .03f,
                 location.transform.position.y,
                 location.transform.position.z),
@@ -37,10 +34,10 @@ public class equipment : MonoBehaviour
             gun.transform.SetParent(location.transform);
         }
 
-        if (gun3_obj != null)
+        if (gun_obj[2] != null)
         {
             Transform location = parent_obj.transform.GetChild(2);
-            GameObject gun = Instantiate(gun3_obj, new Vector3(
+            GameObject gun = Instantiate(gun_obj[2], new Vector3(
                 location.transform.position.x + .02f,
                 location.transform.position.y + .05f,
                 location.transform.position.z),
@@ -49,10 +46,10 @@ public class equipment : MonoBehaviour
             gun.transform.SetParent(location.transform);
         }
 
-        if (gun4_obj != null)
+        if (gun_obj[3] != null)
         {
             Transform location = parent_obj.transform.GetChild(3);
-            GameObject gun = Instantiate(gun4_obj, new Vector3(
+            GameObject gun = Instantiate(gun_obj[3], new Vector3(
                 location.transform.position.x - .02f,
                 location.transform.position.y + .05f,
                 location.transform.position.z),
@@ -62,9 +59,5 @@ public class equipment : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    
 }

@@ -4935,6 +4935,7 @@ MonoBehaviour:
   move_rotate: 2
   GameOver: {fileID: 0}
   Ui_Hp_Player: {fileID: 0}
+  Dead_explosion: {fileID: 0}
 --- !u!114 &7802795446137880993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4948,10 +4949,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent_obj: {fileID: 4904626227333975842}
-  gun1_obj: {fileID: 5127382492146912836, guid: e78857879970cbc4bbf5f003ce6520a7, type: 3}
-  gun2_obj: {fileID: 5127382492146912836, guid: e78857879970cbc4bbf5f003ce6520a7, type: 3}
-  gun3_obj: {fileID: 5127382492146912836, guid: e78857879970cbc4bbf5f003ce6520a7, type: 3}
-  gun4_obj: {fileID: 5127382492146912836, guid: e78857879970cbc4bbf5f003ce6520a7, type: 3}
+  gun_obj:
+  - {fileID: 5127382492146912836, guid: e78857879970cbc4bbf5f003ce6520a7, type: 3}
+  - {fileID: 5127382492146912836, guid: e78857879970cbc4bbf5f003ce6520a7, type: 3}
+  - {fileID: 5127382492146912836, guid: e78857879970cbc4bbf5f003ce6520a7, type: 3}
+  - {fileID: 5127382492146912836, guid: e78857879970cbc4bbf5f003ce6520a7, type: 3}
 --- !u!1001 &5247206215334982259
 PrefabInstance:
   m_ObjectHideFlags: 0
