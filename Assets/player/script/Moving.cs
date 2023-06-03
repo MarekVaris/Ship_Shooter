@@ -7,8 +7,8 @@ using UnityEngine.UIElements;
 
 public class Moving : MonoBehaviour
 {
-    public int HP = 10;
-    public float speed = 3f;
+    public float HP = 10;
+    public float speed = 2f;
     public float move_rotate = 2f;
     public game_over_scene GameOver;
     public Hp_Player Ui_Hp_Player;
@@ -21,9 +21,13 @@ public class Moving : MonoBehaviour
     private float move_hori = 0.1f;
     private float move_ver = 0.1f;
 
+    private float[] Hp_table = new float[6] { 0, 10, 20, 30, 40, 60 };
+    private float[] Speed_table = new float[6] { 0, 1, 2, 3, 4, 5};
+
     void Start()
     {
-        
+        HP += Hp_table[Save_sys.instance.Hp];
+        speed += Speed_table[Save_sys.instance.Speed];
     }
 
     void Update()
@@ -38,7 +42,6 @@ public class Moving : MonoBehaviour
             move_z = Input.GetAxis("Vertical");
             Move();
         }
-
         
     }
 

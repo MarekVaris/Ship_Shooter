@@ -9,6 +9,8 @@ public class Shop : MonoBehaviour
     public Animator Camera_animation;
     public Animator Ui_MainMenu;
     public Animator Ui_Shop;
+
+    private int Current_gun;
     
     public void Body_Upgrade()
     {
@@ -17,7 +19,25 @@ public class Shop : MonoBehaviour
         transform.Find("Body_Upgrade").gameObject.SetActive(true);
 
     }
-    
+
+    public void Body_Hp(Slider Slider)
+    {
+        if (Slider.value <= 4)
+        {
+            Slider.value += 1;
+            Save_sys.instance.Hp += 1;
+            Save_sys.instance.Save();
+
+        }
+    }
+
+    public void Body_Speed(Slider Slider)
+    {
+        Slider.value += 1;
+        Save_sys.instance.Speed += 1;
+        Save_sys.instance.Save();
+    }
+
     public void Back(Button button)
     {
         button.transform.parent.gameObject.SetActive(false);
@@ -25,15 +45,15 @@ public class Shop : MonoBehaviour
         transform.Find("Menu_back").gameObject.SetActive(true);
     }
 
-    public void Start_game()
-    {
-        SceneManager.LoadScene("Game");
-    }
     public void Back_MainMenu()
     {
         Ui_Shop.SetBool("Ui_Shop", false);
         Ui_MainMenu.SetBool("Ui_menu", true);
         Camera_animation.SetBool("shop", false);
         Camera_animation.SetBool("menu", true);
+    }
+    public void Start_game()
+    {
+        SceneManager.LoadScene("Game");
     }
 }
