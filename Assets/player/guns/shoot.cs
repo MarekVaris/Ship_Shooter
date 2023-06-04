@@ -1,17 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class shoot : MonoBehaviour
 {
-    public float attack_speed = 2f;
-    public GameObject projectile;
+    public float Attack_speed = 5;
+    public int Gun_number;
+    public GameObject Projectile;
 
+    private int Dmg;
+    private int Speed;
     private float time;
-    // Start is called before the first frame update
+    private GameObject Shooted;
+
     void Start()
     {
+        Dmg = Save_sys.instance.Dmg[Gun_number];
+        Speed = Save_sys.instance.Attack_Speed[Gun_number];
+
         Scene currentScene = SceneManager.GetActiveScene();
         if (currentScene.name != "Game")
         {
@@ -19,7 +27,7 @@ public class shoot : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+
     void Update()
     {
 
@@ -29,15 +37,18 @@ public class shoot : MonoBehaviour
     private void Shoot()
     {
         Transform barl = transform.GetChild(1);
-        time += Time.deltaTime * attack_speed;
+        time += Time.deltaTime * ( Attack_speed + Speed );
 
-        if (time >= 1)
+        if (time >= 10)
         {
 
-            Instantiate(projectile, new Vector3(
+            Shooted = Instantiate(Projectile, new Vector3(
                 barl.transform.position.x,
                 barl.transform.position.y,
                 barl.transform.position.z - .35f), new Quaternion(0, 0, 0, 0));
+
+            Shooted.GetComponent<move_projectile>().Projectile_Dmg = Dmg;
+            Shooted.transform.SetParent(GameObject.Find("Projectiles").transform);    
             time = 0;
         }
     }

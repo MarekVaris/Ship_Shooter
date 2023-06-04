@@ -5,10 +5,12 @@ using UnityEngine;
 
 public class move_projectile : MonoBehaviour
 {
-    public float speed_proj = 15f;
+    public float Speed = 15f;
+    public int Projectile_Dmg;
     // Start is called before the first frame update
     void Start()
     {
+        Projectile_Dmg += 2;
         transform.rotation *= Quaternion.Euler(90, 0, 0);
     }
 
@@ -18,7 +20,7 @@ public class move_projectile : MonoBehaviour
         transform.position = new Vector3(
             transform.position.x,
             transform.position.y,
-            transform.position.z - speed_proj * Time.deltaTime);
+            transform.position.z - Speed * Time.deltaTime);
 
         if (transform.position.z < -80)
         {

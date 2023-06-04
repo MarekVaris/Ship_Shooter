@@ -7,12 +7,13 @@ public class shoot_enemy : MonoBehaviour
     public GameObject enemy_bullet;
     public float shooting_speed = 5f;
 
+    private GameObject Shooted;
     private float time;
     private int swap;
     // Start is called before the first frame update
     void Start()
     {
-        Shoot();
+
     }
 
     // Update is called once per frame
@@ -31,7 +32,7 @@ public class shoot_enemy : MonoBehaviour
         {
             if (swap == 1)
             {
-                Instantiate(enemy_bullet, new Vector3(
+                Shooted = Instantiate(enemy_bullet, new Vector3(
                     gun1.transform.position.x,
                     gun1.transform.position.y,
                     gun1.transform.position.z + .2f), Quaternion.identity);
@@ -39,12 +40,14 @@ public class shoot_enemy : MonoBehaviour
             }
             else
             {
-                Instantiate(enemy_bullet, new Vector3(
+                Shooted = Instantiate(enemy_bullet, new Vector3(
                     gun2.transform.position.x,
                     gun2.transform.position.y,
                     gun2.transform.position.z + .2f), Quaternion.identity);
                 swap = 1;
             }
+
+            Shooted.transform.SetParent(GameObject.Find("Projectiles").transform);
             time = 0;
         }
     }

@@ -17,7 +17,7 @@ public class move_enemy : MonoBehaviour
     private int stop = 0;
     private health health_bar;
     Rigidbody rb;
-    // Start is called before the first frame update
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -25,7 +25,6 @@ public class move_enemy : MonoBehaviour
         health_bar = GetComponentInChildren<health>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         destroy_when();
@@ -78,7 +77,7 @@ public class move_enemy : MonoBehaviour
         if (other.gameObject.tag == "bullet" && hitted_by != other.gameObject)
         {
             hitted_by = other.gameObject;
-            HP -= 1;
+            HP -= hitted_by.GetComponent<move_projectile>().Projectile_Dmg;
             health_bar.Health_bar(HP);
             Destroy(other.gameObject);
         }

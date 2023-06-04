@@ -4931,7 +4931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 10
-  speed: 5
+  Speed: 2
   move_rotate: 2
   GameOver: {fileID: 0}
   Ui_Hp_Player: {fileID: 0}
@@ -4949,11 +4949,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent_obj: {fileID: 4904626227333975842}
-  gun_obj:
-  - {fileID: 5127382492146912836, guid: e78857879970cbc4bbf5f003ce6520a7, type: 3}
-  - {fileID: 5127382492146912836, guid: e78857879970cbc4bbf5f003ce6520a7, type: 3}
-  - {fileID: 5127382492146912836, guid: e78857879970cbc4bbf5f003ce6520a7, type: 3}
-  - {fileID: 5127382492146912836, guid: e78857879970cbc4bbf5f003ce6520a7, type: 3}
+  Gun_obj:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &5247206215334982259
 PrefabInstance:
   m_ObjectHideFlags: 0

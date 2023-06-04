@@ -1,17 +1,20 @@
 using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
-using UnityEditor;
 using UnityEngine;
 
 public class Save_sys : MonoBehaviour
 {
     public static Save_sys instance { get; private set; }
 
-    //Body Upgrade
+    // Body Upgrade
     public int Hp;
     public int Speed;
 
+    // Guns Upgrade
+    public GameObject[] Gun_Saved = new GameObject[4];
+    public int[] Dmg = new int[4];
+    public int[] Attack_Speed = new int[4];
 
     private void Awake()
     {
@@ -21,29 +24,35 @@ public class Save_sys : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         Load();
     }
-    public void Save()
+
+    public void Save(int current_gun = 0)
     {
-        BinaryFormatter bf = new BinaryFormatter();
-        FileStream file = File.Create(Application.dataPath + "/Save_system/player_data.dat");
+        string filePath = Application.dataPath + "/Save_system/player_data.json";
         Player_Data data = new Player_Data();
 
         data.Hp = Hp;
         data.Speed = Speed;
+        data.Dmg = Dmg;
+        data.Gun_Saved = Gun_Saved;
+        data.Attack_Speed = Attack_Speed;
 
-        bf.Serialize(file, data);
-        file.Close();
+        string jsonData = JsonUtility.ToJson(data);
+        File.WriteAllText(filePath, jsonData);
     }
 
     public void Load()
     {
-        if (File.Exists(Application.dataPath + "/Save_system/player_data.dat"))
+        string filePath = Application.dataPath + "/Save_system/player_data.json";
+        if (File.Exists(filePath))
         {
-            BinaryFormatter bf = new BinaryFormatter();
-            FileStream file = File.Open(Application.dataPath + "/Save_system/player_data.dat", FileMode.Open);
-            Player_Data data = (Player_Data)bf.Deserialize(file);
+            string jsonData = File.ReadAllText(filePath);
+            Player_Data data = JsonUtility.FromJson<Player_Data>(jsonData);
 
             Hp = data.Hp;
             Speed = data.Speed;
+            Dmg = data.Dmg;
+            Gun_Saved = data.Gun_Saved;
+            Attack_Speed = data.Attack_Speed;
         }
     }
 }
@@ -53,4 +62,7 @@ class Player_Data
 {
     public int Hp;
     public int Speed;
+    public GameObject[] Gun_Saved;
+    public int[] Dmg;
+    public int[] Attack_Speed;
 }

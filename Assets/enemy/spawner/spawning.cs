@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class spawning : MonoBehaviour
@@ -7,6 +8,7 @@ public class spawning : MonoBehaviour
     public GameObject Enemy_guy;
     public float spawning_intens = 5f;
 
+    private GameObject Spawned;
     private BoxCollider boxCollider;
     private float random_x;
     private float random_z;
@@ -29,11 +31,12 @@ public class spawning : MonoBehaviour
             random_z = Random.Range(-boxCollider.size.z, boxCollider.size.z) * .5f;
             timer = 0;
 
-            Instantiate(Enemy_guy, new Vector3(
+            Spawned = Instantiate(Enemy_guy, new Vector3(
                 transform.position.x + random_x,
                 transform.position.y,
                 transform.position.z + random_z), Quaternion.identity);
 
+            Spawned.transform.SetParent(GameObject.Find("Enemies").transform);
         }
 
     }
