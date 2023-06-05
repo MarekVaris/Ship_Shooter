@@ -36,7 +36,7 @@ public class shoot : MonoBehaviour
     }
     private void Shoot()
     {
-        Transform barl = transform.GetChild(1);
+        Transform barl = transform.GetChild(0);
         time += Time.deltaTime * ( Attack_speed + Speed );
 
         if (time >= 10)

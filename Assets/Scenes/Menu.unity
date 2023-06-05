@@ -3121,7 +3121,7 @@ GameObject:
   - component: {fileID: 596660954}
   - component: {fileID: 596660953}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Sniper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3191,7 +3191,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 596660954}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1978764750}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: Swap_Gun
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 4979118908352466068, guid: ee0332da3d16c6548bdc752fb6e1fb46, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &596660954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3395,7 +3407,7 @@ MonoBehaviour:
         m_MethodName: Swap_Gun
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 5127382492146912836, guid: e78857879970cbc4bbf5f003ce6520a7, type: 3}
+          m_ObjectArgument: {fileID: 7211967454321911105, guid: 871fe1ffbe5447745813c40872904d72, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -3498,7 +3510,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Sniper
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6276,7 +6288,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1540585993}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1978764750}
+        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+        m_MethodName: Swap_Gun
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1540585993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8406,8 +8430,8 @@ MonoBehaviour:
   Hp: 0
   Speed: 0
   Gun_Saved:
-  - {fileID: 5127382492146912836, guid: e78857879970cbc4bbf5f003ce6520a7, type: 3}
-  - {fileID: 0}
+  - {fileID: 7211967454321911105, guid: 871fe1ffbe5447745813c40872904d72, type: 3}
+  - {fileID: 1226405681485649600, guid: 871fe1ffbe5447745813c40872904d72, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   Dmg: 00000000000000000000000000000000
