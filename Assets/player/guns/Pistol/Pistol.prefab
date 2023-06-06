@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 2508832227188085248}
   - component: {fileID: 6329567889406119647}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Rife
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -214,4 +214,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Attack_speed: 5
   Gun_number: 0
-  Projectile: {fileID: 18874306068604227, guid: a1d4a8cd2192fef4dbc95000c57b0e8d, type: 3}
+  Projectile: {fileID: 2535965719533648107, guid: a4258886030168f41bbf54047e156b91, type: 3}

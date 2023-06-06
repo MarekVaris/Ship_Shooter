@@ -11,7 +11,7 @@ public class move_projectile : MonoBehaviour
     void Start()
     {
         Projectile_Dmg += 2;
-        transform.rotation *= Quaternion.Euler(90, 0, 0);
+        transform.rotation *= Quaternion.Euler(90, 180, 0);
     }
 
     // Update is called once per frame

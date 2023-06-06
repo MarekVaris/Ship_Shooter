@@ -129,9 +129,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb692414698d3fe4aa34a2f3c3ad5e49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Attack_speed: 5
+  Attack_speed: 2
   Gun_number: 0
-  Projectile: {fileID: 18874306068604227, guid: a1d4a8cd2192fef4dbc95000c57b0e8d, type: 3}
+  Projectile: {fileID: 5183234973676169665, guid: 6e52abdd60529644e9d0919ecb26a26b, type: 3}
 --- !u!1 &8890422378887233477
 GameObject:
   m_ObjectHideFlags: 0
