@@ -73,13 +73,15 @@ public class move_enemy : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        
-        if (other.gameObject.tag == "bullet" && hitted_by != other.gameObject)
+        if (other.gameObject.tag == "bullet")
         {
-            hitted_by = other.gameObject;
-            HP -= hitted_by.GetComponent<move_projectile>().Projectile_Dmg;
+            HP -= other.GetComponent<move_projectile>().Projectile_Dmg;
             health_bar.Health_bar(HP);
-            Destroy(other.gameObject);
+            if (other.gameObject.name != "Sniper_bullet(Clone)")
+            {
+                Destroy(other.gameObject);
+            }
+
         }
     }
 }

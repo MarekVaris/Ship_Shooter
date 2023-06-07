@@ -1185,8 +1185,8 @@ MonoBehaviour:
   Hp: 0
   Speed: 0
   Gun_Saved:
-  - {fileID: 5127382492146912836, guid: e78857879970cbc4bbf5f003ce6520a7, type: 3}
-  - {fileID: 0}
+  - {fileID: 5047427540749439976, guid: 871fe1ffbe5447745813c40872904d72, type: 3}
+  - {fileID: 4979118908352466068, guid: ee0332da3d16c6548bdc752fb6e1fb46, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   Dmg: 00000000000000000000000000000000
@@ -1255,7 +1255,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8570501b8ba40bd4cae74cb8d008c987, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.04
   m_Pitch: 1
   Loop: 1
   Mute: 0

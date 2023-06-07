@@ -131,7 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Attack_speed: 5
   Gun_number: 0
-  Projectile: {fileID: 919132149155446097, guid: 3870a00389649774c84bd46cea099d88, type: 3}
+  Projectile: {fileID: 2535965719533648107, guid: a4258886030168f41bbf54047e156b91, type: 3}
 --- !u!1 &8679653450421821625
 GameObject:
   m_ObjectHideFlags: 0

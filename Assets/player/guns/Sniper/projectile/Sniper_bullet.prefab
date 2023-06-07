@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5183234973676169665}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -0.008, z: 0}
+  m_LocalScale: {x: 2.0253, y: 2.0253, z: 2.0253}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 505034535227624800}
@@ -60,8 +60,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.52, z: 3}
-  m_Center: {x: 0, y: 0.26, z: 0}
+  m_Size: {x: 0.25, y: 0.52, z: 3}
+  m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &7828536410619833872
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,7 +87,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7828536410619833872}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.034, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -136,7 +136,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.25
+  m_Time: 0.3
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -144,8 +144,8 @@ TrailRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.036964417
-        value: 0.054851532
+        time: 0.02022934
+        value: 0.26485062
         inSlope: 0
         outSlope: 0
         tangentMode: 0
