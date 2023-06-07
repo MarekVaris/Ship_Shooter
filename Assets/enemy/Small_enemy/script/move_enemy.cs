@@ -67,6 +67,7 @@ public class move_enemy : MonoBehaviour
 
         if (HP <= 0)
         {
+            gameObject.GetComponent<Update_Slider>().Update_slider();
             Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
@@ -75,7 +76,7 @@ public class move_enemy : MonoBehaviour
     {
         if (other.gameObject.tag == "bullet")
         {
-            HP -= other.GetComponent<move_projectile>().Projectile_Dmg;
+            HP -= other.GetComponent<move_projectile>().Standard_Dmg;
             health_bar.Health_bar(HP);
             if (other.gameObject.name != "Sniper_bullet(Clone)")
             {

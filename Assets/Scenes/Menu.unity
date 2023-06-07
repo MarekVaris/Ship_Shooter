@@ -9107,7 +9107,7 @@ MonoBehaviour:
   Hp: 0
   Speed: 0
   Gun_Saved:
-  - {fileID: 7211967454321911105, guid: 871fe1ffbe5447745813c40872904d72, type: 3}
+  - {fileID: 5047427540749439976, guid: 871fe1ffbe5447745813c40872904d72, type: 3}
   - {fileID: 1226405681485649600, guid: 871fe1ffbe5447745813c40872904d72, type: 3}
   - {fileID: 0}
   - {fileID: 0}

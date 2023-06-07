@@ -4931,11 +4931,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 10
-  Speed: 2
+  Speed: 3
   move_rotate: 2
   GameOver: {fileID: 0}
   Ui_Hp_Player: {fileID: 0}
-  Dead_explosion: {fileID: 0}
+  Dead_explosion: {fileID: 8858021312709762210, guid: 49925c26966a48e40870e1ff9c8ac8e9, type: 3}
 --- !u!114 &7802795446137880993
 MonoBehaviour:
   m_ObjectHideFlags: 0

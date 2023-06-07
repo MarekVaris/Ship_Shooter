@@ -7,6 +7,9 @@ public class Save_sys : MonoBehaviour
 {
     public static Save_sys instance { get; private set; }
 
+    //Game
+    public int Level;
+
     // Body Upgrade
     public int Hp;
     public int Speed;
@@ -30,6 +33,7 @@ public class Save_sys : MonoBehaviour
         string filePath = Application.dataPath + "/Save_system/player_data.json";
         Player_Data data = new Player_Data();
 
+        data.Level = Level;
         data.Hp = Hp;
         data.Speed = Speed;
         data.Dmg = Dmg;
@@ -48,6 +52,7 @@ public class Save_sys : MonoBehaviour
             string jsonData = File.ReadAllText(filePath);
             Player_Data data = JsonUtility.FromJson<Player_Data>(jsonData);
 
+            Level = data.Level;
             Hp = data.Hp;
             Speed = data.Speed;
             Dmg = data.Dmg;
@@ -60,6 +65,7 @@ public class Save_sys : MonoBehaviour
 [Serializable]
 class Player_Data
 {
+    public int Level;
     public int Hp;
     public int Speed;
     public GameObject[] Gun_Saved;

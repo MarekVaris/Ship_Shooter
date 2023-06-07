@@ -9,7 +9,7 @@ public class equipment : MonoBehaviour
     public GameObject[] Gun_obj = new GameObject[4] { null, null, null, null };
 
     private shoot Current_gun;
-    // Start is called before the first frame update
+
     void Start()
     {
 

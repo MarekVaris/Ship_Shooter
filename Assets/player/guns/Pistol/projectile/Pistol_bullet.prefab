@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 15
+  Standard_Dmg: 2
   Projectile_Dmg: 1
 --- !u!65 &8764090465872973637
 BoxCollider:
