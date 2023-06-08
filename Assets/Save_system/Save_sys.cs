@@ -9,7 +9,6 @@ public class Save_sys : MonoBehaviour
 
     //Game
     public int Level;
-    public int Points;
 
     // Body Upgrade
     public int Hp;
@@ -19,8 +18,6 @@ public class Save_sys : MonoBehaviour
     public GameObject[] Gun_Saved = new GameObject[4];
     public int[] Dmg = new int[4];
     public int[] Attack_Speed = new int[4];
-
-    public bool Shop_Start = false;
 
     private void Awake()
     {
@@ -37,7 +34,6 @@ public class Save_sys : MonoBehaviour
         Player_Data data = new Player_Data();
 
         data.Level = Level;
-        data.Points = Points;   
         data.Hp = Hp;
         data.Speed = Speed;
         data.Dmg = Dmg;
@@ -57,7 +53,6 @@ public class Save_sys : MonoBehaviour
             Player_Data data = JsonUtility.FromJson<Player_Data>(jsonData);
 
             Level = data.Level;
-            Points = data.Points;
             Hp = data.Hp;
             Speed = data.Speed;
             Dmg = data.Dmg;
@@ -71,7 +66,6 @@ public class Save_sys : MonoBehaviour
 class Player_Data
 {
     public int Level;
-    public int Points;
     public int Hp;
     public int Speed;
     public GameObject[] Gun_Saved;
