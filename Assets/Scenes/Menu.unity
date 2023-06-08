@@ -9104,6 +9104,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3716250443f969e43ad2dcf07c6abb0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Level: 0
+  Points: 0
   Hp: 0
   Speed: 0
   Gun_Saved:
@@ -9113,6 +9115,7 @@ MonoBehaviour:
   - {fileID: 0}
   Dmg: 00000000000000000000000000000000
   Attack_Speed: 00000000000000000000000000000000
+  Shop_Start: 0
 --- !u!1 &2091827150
 GameObject:
   m_ObjectHideFlags: 0
