@@ -93,6 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5643769996182541870}
   - component: {fileID: 8814315315247761953}
+  - component: {fileID: 2872286686093178362}
   m_Layer: 0
   m_Name: Sniper
   m_TagString: Untagged
@@ -132,7 +133,6 @@ MonoBehaviour:
   Attack_speed: 2
   Gun_number: 0
   Projectile: {fileID: 5183234973676169665, guid: 6e52abdd60529644e9d0919ecb26a26b, type: 3}
-<<<<<<< HEAD
   audioSource: {fileID: 0}
   clip: {fileID: 8300000, guid: 6679e3202aa3998468166226756c11ba, type: 3}
 --- !u!82 &2872286686093178362
@@ -231,8 +231,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-=======
->>>>>>> parent of db187c5 (Sound(shoots))
 --- !u!1 &8890422378887233477
 GameObject:
   m_ObjectHideFlags: 0
