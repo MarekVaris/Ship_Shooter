@@ -67,7 +67,7 @@ public class move_enemy : MonoBehaviour
 
         if (HP <= 0)
         {
-            gameObject.GetComponent<Update_Slider>().Update_slider();
+            gameObject.GetComponent<Update_Game>().Update_Game_Components_on_dead();
             Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
