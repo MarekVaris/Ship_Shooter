@@ -28,28 +28,27 @@ public class shoot_enemy : MonoBehaviour
 
         time += Time.deltaTime * shooting_speed;
 
-        
         if (time > 30)
         {
             if (swap == 1)
             {
                 Shooted = Instantiate(enemy_bullet, new Vector3(
-                   gun1.transform.position.x,
-                   gun1.transform.position.y,
-                   gun1.transform.position.z + .2f), Quaternion.identity);
-                   swap = 0;
+                    gun1.transform.position.x,
+                    gun1.transform.position.y,
+                    gun1.transform.position.z + .2f), Quaternion.identity);
+                swap = 0;
             }
             else
             {
                 Shooted = Instantiate(enemy_bullet, new Vector3(
-                   gun2.transform.position.x,
-                   gun2.transform.position.y,
-                   gun2.transform.position.z + .2f), Quaternion.identity);
-                   swap = 1;
+                    gun2.transform.position.x,
+                    gun2.transform.position.y,
+                    gun2.transform.position.z + .2f), Quaternion.identity);
+                swap = 1;
             }
 
-                Shooted.transform.SetParent(GameObject.Find("Projectiles").transform);
-                time = 0;
+            Shooted.transform.SetParent(GameObject.Find("Projectiles").transform);
+            time = 0;
         }
     }
 }
