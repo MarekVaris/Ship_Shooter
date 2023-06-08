@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 2374909486779242257}
   - component: {fileID: -2289023298038626875}
   - component: {fileID: 8195407719803557803}
-  - component: {fileID: 5518606747512231916}
+  - component: {fileID: 3261720380295862447}
   m_Layer: 0
   m_Name: enemy
   m_TagString: Untagged
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy_bullet: {fileID: 998427605149165485, guid: 2963f6c19143f3b4cbbed1c163bb4d13, type: 3}
   shooting_speed: 5
---- !u!114 &5518606747512231916
+--- !u!114 &3261720380295862447
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,10 +192,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2765880485851863788}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1ac2659a6115d34684e8c3eba4bf2fa, type: 3}
+  m_Script: {fileID: 11500000, guid: fcffcb09fce26804f8f220d2d26d5340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Status_Value: 5
+  Status_Value: 3
   Add_Points: 10
 --- !u!1 &5941791566354507693
 GameObject:

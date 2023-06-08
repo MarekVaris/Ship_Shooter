@@ -21,6 +21,7 @@ public class Save_sys : MonoBehaviour
     public int[] Attack_Speed = new int[4];
 
     public bool Shop_Start = false;
+    public bool Auto_Shoot = false;
 
     private void Awake()
     {

@@ -33,7 +33,7 @@ public class shoot : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) || Save_sys.instance.Auto_Shoot)
         {
             Shoot();
         }
