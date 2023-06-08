@@ -1337,8 +1337,11 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 11, y: -180, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+=======
+>>>>>>> parent of ad6768d (Finish Scene, Points system, Start Camera on Shop.)
 =======
 >>>>>>> parent of ad6768d (Finish Scene, Points system, Start Camera on Shop.)
 --- !u!114 &963194229
@@ -1375,6 +1378,7 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   m_GameObject: {fileID: 965339803}
@@ -1471,6 +1475,8 @@ CanvasRenderer:
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of ad6768d (Finish Scene, Points system, Start Camera on Shop.)
 =======
 >>>>>>> parent of ad6768d (Finish Scene, Points system, Start Camera on Shop.)
 --- !u!1 &1054040496
@@ -1675,8 +1681,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+=======
+>>>>>>> parent of ad6768d (Finish Scene, Points system, Start Camera on Shop.)
 =======
 >>>>>>> parent of ad6768d (Finish Scene, Points system, Start Camera on Shop.)
 --- !u!1 &1158913890
@@ -1751,12 +1760,15 @@ Transform:
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   Timeline: {fileID: 1081395920}
   Ui_Finish: {fileID: 257933401}
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of ad6768d (Finish Scene, Points system, Start Camera on Shop.)
 =======
 >>>>>>> parent of ad6768d (Finish Scene, Points system, Start Camera on Shop.)
 --- !u!1 &1174483288
