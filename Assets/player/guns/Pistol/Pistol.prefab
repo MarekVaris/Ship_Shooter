@@ -93,7 +93,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5568630808892442962}
   - component: {fileID: 8626845178777094640}
-  - component: {fileID: 5377287456185840151}
   m_Layer: 0
   m_Name: Pistol
   m_TagString: Untagged
@@ -133,6 +132,7 @@ MonoBehaviour:
   Attack_speed: 5
   Gun_number: 0
   Projectile: {fileID: 2535965719533648107, guid: a4258886030168f41bbf54047e156b91, type: 3}
+<<<<<<< HEAD
   audioSource: {fileID: 0}
   clip: {fileID: 8300000, guid: 6679e3202aa3998468166226756c11ba, type: 3}
 --- !u!82 &5377287456185840151
@@ -231,6 +231,8 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+=======
+>>>>>>> parent of db187c5 (Sound(shoots))
 --- !u!1 &8679653450421821625
 GameObject:
   m_ObjectHideFlags: 0
