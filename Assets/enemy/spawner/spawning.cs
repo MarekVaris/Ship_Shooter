@@ -5,25 +5,26 @@ using UnityEngine;
 
 public class spawning : MonoBehaviour
 {
+
     public GameObject Enemy_guy;
     public float spawning_intens = 5f;
+    public GameObject Follow;
 
     private GameObject Spawned;
     private BoxCollider boxCollider;
     private float random_x;
     private float random_z;
     private float timer = 10f;
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime * spawning_intens;
+        if (Follow) gameObject.transform.position = new Vector3(Follow.transform.position.x, transform.position.y, transform.position.z);
 
+        timer += Time.deltaTime * spawning_intens;
         if(timer > 10)
         {
             boxCollider = GetComponent<BoxCollider>(); 

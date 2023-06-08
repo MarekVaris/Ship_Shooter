@@ -8,6 +8,7 @@ public class Status_Bar : MonoBehaviour
 {
     public PlayableDirector Timeline;
     public GameObject Ui_Finish;
+    public GameObject Text;
 
     private Slider Slider;
     void Start()
@@ -20,11 +21,16 @@ public class Status_Bar : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Slider.value <= 0)
         {
-            Timeline.Play();
-            Ui_Finish.gameObject.GetComponent<Stats_On_Finish>().Update_Stats();
-            Ui_Finish.SetActive(true);
+            Text.SetActive(true);
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Timeline.Play();
+                Ui_Finish.gameObject.GetComponent<Stats_On_Finish>().Update_Stats();
+                Ui_Finish.SetActive(true);
+            }
         }
     }
 }

@@ -49,8 +49,6 @@ public class Moving : MonoBehaviour
         if (move_x != 0 || move_z != 0)
         {
 
-            if (transform.position.x < -13) move_x -= 1f;
-            else if (transform.position.x > 13) move_x += 1f;
             if (transform.position.z > 4) move_z += 1f;
             else if (transform.position.z < -10) move_z -= 1f;
 
