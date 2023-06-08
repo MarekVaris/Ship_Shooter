@@ -6,13 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class game_over_scene : MonoBehaviour
 {
+    
     public void Setup()
     {
-        gameObject.SetActive(true);
+        gameObject.SetActive(true);   
     }
 
     public void Reser_button()
-    { 
+    {
         SceneManager.LoadScene("Game");
     }
 
