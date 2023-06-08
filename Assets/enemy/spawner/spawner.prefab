@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b46e46f0a1b29094983ecb9ec2aa1fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy_guy: {fileID: 2765880485851863788, guid: 718ac139915e83d468023b8999ae14cd, type: 3}
+  Enemy_guy: {fileID: 3835050043111620661, guid: 718ac139915e83d468023b8999ae14cd, type: 3}
   spawning_intens: 5
 --- !u!65 &2857572251180032778
 BoxCollider:

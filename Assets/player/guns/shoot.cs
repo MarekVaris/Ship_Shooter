@@ -10,9 +10,6 @@ public class shoot : MonoBehaviour
     public int Gun_number;
     public GameObject Projectile;
 
-    public AudioSource audioSource;
-    public AudioClip clip;
-
     private int Dmg;
     private int Speed;
     private float time;
@@ -33,10 +30,8 @@ public class shoot : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
-        {
-            Shoot();
-        }
+
+        Shoot();
 
     }
     private void Shoot()
@@ -55,9 +50,6 @@ public class shoot : MonoBehaviour
             Shooted.GetComponent<move_projectile>().Projectile_Dmg = Dmg;
             Shooted.transform.SetParent(GameObject.Find("Projectiles").transform);    
             time = 0;
-            audioSource = GetComponent<AudioSource>();
-            audioSource.clip = clip;
-            audioSource.Play();
         }
     }
 }
