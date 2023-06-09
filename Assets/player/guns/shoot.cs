@@ -20,6 +20,12 @@ public class shoot : MonoBehaviour
 
     void Start()
     {
+
+        if (transform.parent.name == "gun_holder1") time = 0;
+        if (transform.parent.name == "gun_holder2") time = 3;
+        if (transform.parent.name == "gun_holder3") time = 6;
+        if (transform.parent.name == "gun_holder4") time = 9;
+
         Dmg = Save_sys.instance.Dmg[Gun_number];
         Speed = Save_sys.instance.Attack_Speed[Gun_number];
 

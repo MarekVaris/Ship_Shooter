@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -13,7 +14,7 @@ public class Points_Update : MonoBehaviour
         float Points = GameObject.Find("EventSystem").GetComponent<Data_In_Game>().Points;
         float Current = Mathf.SmoothDamp(Status, Points, ref CurrentVelo, 100 * Time.deltaTime);
         Status = Current;
-        gameObject.GetComponent<TextMeshProUGUI>().text =  ((int)Current).ToString();
+        gameObject.GetComponent<TextMeshProUGUI>().text = Math.Round(Current).ToString();
     }
 }
 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.UI;
@@ -27,9 +28,11 @@ public class Status_Bar : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.E))
             {
+                Save_sys.instance.Auto_Shoot = false;
                 Timeline.Play();
                 Ui_Finish.gameObject.GetComponent<Stats_On_Finish>().Update_Stats();
                 Ui_Finish.SetActive(true);
+                Save_sys.instance.Auto_Shoot = true;
             }
         }
     }
