@@ -10,6 +10,7 @@ public class Status_Bar : MonoBehaviour
     public PlayableDirector Timeline;
     public GameObject Ui_Finish;
     public GameObject Text;
+    public GameObject Player;
 
     private Slider Slider;
     void Start()
@@ -30,6 +31,7 @@ public class Status_Bar : MonoBehaviour
             {
                 Save_sys.instance.Auto_Shoot = false;
                 Timeline.Play();
+                Player.GetComponent<Moving>().enabled = false;
                 Ui_Finish.gameObject.GetComponent<Stats_On_Finish>().Update_Stats();
                 Ui_Finish.SetActive(true);
                 Save_sys.instance.Auto_Shoot = true;

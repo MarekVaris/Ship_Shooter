@@ -68,6 +68,7 @@ public class Shop_Button_Update : MonoBehaviour
         else
         {
             Text.text = "Max";
+            gameObject.GetComponent<Button>().interactable = false;
         }
     }
 

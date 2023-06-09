@@ -79,7 +79,35 @@ public class Shop : MonoBehaviour
 
     public void Swap_Gun(GameObject Gun_Object)
     {
-        Save_sys.instance.Gun_Saved[Current_gun] = Gun_Object;
+        if (Save_sys.instance.Gun_Saved[Current_gun] != null)
+        {
+            int Sum = 0;
+            if (Gun_Object.name == "Pistol")
+            {
+                for (int i = 1; Save_sys.instance.Dmg[Current_gun]+1 > i; i++) Sum += 100 * i;
+                for (int i = 1; Save_sys.instance.Attack_Speed[Current_gun]+1 > i; i++) Sum += 100 * i;
+                Save_sys.instance.Points += Sum + 200;
+            }
+            else if (Gun_Object.name == "Sniper")
+            {
+                for (int i = 1; Save_sys.instance.Dmg[Current_gun] + 1 > i; i++) Sum += 200 * i;
+                for (int i = 1; Save_sys.instance.Attack_Speed[Current_gun] + 1 > i; i++) Sum += 200 * i;
+                Save_sys.instance.Points += Sum + 400;
+            }
+
+            Save_sys.instance.Gun_Saved[Current_gun] = null;
+            Save_sys.instance.Dmg[Current_gun] = 0;
+            Save_sys.instance.Attack_Speed[Current_gun] = 0;
+            Dmg.GetComponent<Value_Update>().Update_Gun(Current_gun);
+            Attack_Speed.GetComponent<Value_Update>().Update_Gun(Current_gun);
+
+        }
+        else
+        {
+            if (Gun_Object.name == "Pistol") Save_sys.instance.Points -= 200;
+            else if (Gun_Object.name == "Sniper") Save_sys.instance.Points -= 400;
+            Save_sys.instance.Gun_Saved[Current_gun] = Gun_Object;
+        }
         Save_sys.instance.Save();
         Player_Ship.GetComponent<equipment>().Update_Guns(Current_gun);
     }
