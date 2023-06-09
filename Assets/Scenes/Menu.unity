@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.007039801, g: 0.0042838654, b: 0.033701655, a: 1}
+  m_IndirectSpecularColor: {r: 0.0070618135, g: 0.0042965026, b: 0.03383014, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -394,8 +394,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -980,8 +980,9 @@ GameObject:
   - component: {fileID: 123880659}
   - component: {fileID: 123880658}
   - component: {fileID: 123880657}
+  - component: {fileID: 123880660}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Buy_Speed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -995,8 +996,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 123880655}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.000014901161}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.000017881393}
+  m_LocalScale: {x: 1, y: 1, z: 0.99999994}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 187075401}
@@ -1029,11 +1030,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 0.4392157, g: 1, b: 0.27058825, a: 1}
+    m_HighlightedColor: {r: 0.39607844, g: 1, b: 0, a: 0.56078434}
+    m_PressedColor: {r: 0, g: 0.5372549, b: 0.07450981, a: 1}
+    m_SelectedColor: {r: 0.4392157, g: 1, b: 0.27058825, a: 1}
+    m_DisabledColor: {r: 1, g: 0, b: 0, a: 0.22745098}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1059,6 +1060,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 1444142683}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 123880660}
+        m_TargetAssemblyTypeName: Shop_Button_Update, Assembly-CSharp
+        m_MethodName: Points_Update_On_Click
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1102,6 +1115,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 123880655}
   m_CullTransparentMesh: 1
+--- !u!114 &123880660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123880655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbacd294b9d3bd440bbed857ee4b2fae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &130578610
 GameObject:
   m_ObjectHideFlags: 0
@@ -1249,7 +1274,7 @@ GameObject:
   - component: {fileID: 187075403}
   - component: {fileID: 187075402}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Amount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1559,7 +1584,7 @@ GameObject:
   - component: {fileID: 232201178}
   - component: {fileID: 232201181}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Options
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1814,7 +1839,7 @@ GameObject:
   - component: {fileID: 280706774}
   - component: {fileID: 280706773}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Main_Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2266,8 +2291,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2689,7 +2714,7 @@ GameObject:
   - component: {fileID: 470128903}
   - component: {fileID: 470128902}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Back_to_list
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3094,7 +3119,7 @@ GameObject:
   - component: {fileID: 486270831}
   - component: {fileID: 486270830}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4502,6 +4527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Slider: {fileID: 1209795209}
+  Current_Gun: 0
 --- !u!1 &974337531
 GameObject:
   m_ObjectHideFlags: 0
@@ -4648,7 +4674,7 @@ GameObject:
   - component: {fileID: 1043042196}
   - component: {fileID: 1043042195}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Start_Game
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5072,8 +5098,9 @@ GameObject:
   - component: {fileID: 1139967724}
   - component: {fileID: 1139967723}
   - component: {fileID: 1139967722}
+  - component: {fileID: 1139967725}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Buy_HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5087,8 +5114,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139967720}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.000014901161}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.00002682209}
+  m_LocalScale: {x: 1, y: 1, z: 0.99999994}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1976565146}
@@ -5097,7 +5124,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -24.999992, y: 0}
+  m_AnchoredPosition: {x: -24.99997, y: 0}
   m_SizeDelta: {x: 49.999992, y: 24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1139967722
@@ -5121,11 +5148,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_NormalColor: {r: 0.4405352, g: 1, b: 0.2688679, a: 1}
+    m_HighlightedColor: {r: 0.39694643, g: 1, b: 0, a: 0.56078434}
+    m_PressedColor: {r: 0, g: 0.5377358, b: 0.07332767, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 0, b: 0, a: 0.22745098}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -5151,6 +5178,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 1209795209}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1139967725}
+        m_TargetAssemblyTypeName: Shop_Button_Update, Assembly-CSharp
+        m_MethodName: Points_Update_On_Click
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5194,6 +5233,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139967720}
   m_CullTransparentMesh: 1
+--- !u!114 &1139967725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139967720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbacd294b9d3bd440bbed857ee4b2fae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1181377214
 GameObject:
   m_ObjectHideFlags: 0
@@ -5247,6 +5298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Slider: {fileID: 1590986501}
+  Current_Gun: 0
 --- !u!1 &1204573909
 GameObject:
   m_ObjectHideFlags: 0
@@ -5307,8 +5359,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -5786,6 +5838,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Slider: {fileID: 1388872661}
+  Current_Gun: 0
 --- !u!1 &1306069295
 GameObject:
   m_ObjectHideFlags: 0
@@ -6946,7 +6999,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.112
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -7088,8 +7141,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -7288,6 +7341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Slider: {fileID: 1444142683}
+  Current_Gun: 0
 --- !u!1 &1625355015
 GameObject:
   m_ObjectHideFlags: 0
@@ -7300,8 +7354,9 @@ GameObject:
   - component: {fileID: 1625355019}
   - component: {fileID: 1625355018}
   - component: {fileID: 1625355017}
+  - component: {fileID: 1625355020}
   m_Layer: 5
-  m_Name: price
+  m_Name: Buy_Aa_Speed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7315,8 +7370,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1625355015}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.000014901161}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0000029802322}
+  m_LocalScale: {x: 1, y: 1, z: 0.99999994}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 486270829}
@@ -7325,7 +7380,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -24.999992, y: 0}
+  m_AnchoredPosition: {x: -24.99997, y: 0}
   m_SizeDelta: {x: 49.999992, y: 24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1625355017
@@ -7349,11 +7404,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_NormalColor: {r: 0.4392157, g: 1, b: 0.27058825, a: 1}
+    m_HighlightedColor: {r: 0.39607844, g: 1, b: 0, a: 0.56078434}
+    m_PressedColor: {r: 0, g: 0.5372549, b: 0.07450981, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 0, b: 0, a: 0.22745098}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -7379,6 +7434,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 1590986501}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1625355020}
+        m_TargetAssemblyTypeName: Shop_Button_Update, Assembly-CSharp
+        m_MethodName: Points_Update_On_Click
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -7422,6 +7489,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1625355015}
   m_CullTransparentMesh: 1
+--- !u!114 &1625355020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625355015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbacd294b9d3bd440bbed857ee4b2fae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1635239129
 GameObject:
   m_ObjectHideFlags: 0
@@ -7704,7 +7783,7 @@ GameObject:
   - component: {fileID: 1647705402}
   - component: {fileID: 1647705401}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8458,7 +8537,7 @@ GameObject:
   - component: {fileID: 1951171040}
   - component: {fileID: 1951171039}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Game_Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8641,8 +8720,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -8671,7 +8750,7 @@ GameObject:
   - component: {fileID: 1976565148}
   - component: {fileID: 1976565147}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Amount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9087,8 +9166,9 @@ GameObject:
   - component: {fileID: 2024830700}
   - component: {fileID: 2024830699}
   - component: {fileID: 2024830698}
+  - component: {fileID: 2024830701}
   m_Layer: 5
-  m_Name: price
+  m_Name: Buy_Dmg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9136,11 +9216,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_NormalColor: {r: 0.4392157, g: 1, b: 0.27058825, a: 1}
+    m_HighlightedColor: {r: 0.39607844, g: 1, b: 0, a: 0.56078434}
+    m_PressedColor: {r: 0, g: 0.5372549, b: 0.07450981, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 0, b: 0, a: 0.22745098}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -9166,6 +9246,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 1388872661}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2024830701}
+        m_TargetAssemblyTypeName: Shop_Button_Update, Assembly-CSharp
+        m_MethodName: Points_Update_On_Click
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -9209,6 +9301,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2024830696}
   m_CullTransparentMesh: 1
+--- !u!114 &2024830701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024830696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbacd294b9d3bd440bbed857ee4b2fae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2084790978
 GameObject:
   m_ObjectHideFlags: 0
