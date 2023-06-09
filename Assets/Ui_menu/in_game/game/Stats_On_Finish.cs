@@ -17,8 +17,6 @@ public class Stats_On_Finish : MonoBehaviour
     {
         int Level = Save_sys.instance.Level;
         Current_Level.text = "Level: " + Level.ToString() + " -> " + (Level+1).ToString();
-
-        Save_sys.instance.Level += 1;
     }
 
     public void Update_Stats()
@@ -32,7 +30,7 @@ public class Stats_On_Finish : MonoBehaviour
     public void Back_To_Shop()
     {
         Data = GameObject.Find("EventSystem").GetComponent<Data_In_Game>();
-
+        Save_sys.instance.Level += 1;
         Save_sys.instance.Points += Data.Points;
         Save_sys.instance.Shop_Start = true;
         Save_sys.instance.Save();
