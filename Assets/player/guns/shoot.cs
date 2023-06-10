@@ -20,7 +20,6 @@ public class shoot : MonoBehaviour
 
     void Start()
     {
-
         if (transform.parent.name == "gun_holder1") time = 0;
         if (transform.parent.name == "gun_holder2") time = 3;
         if (transform.parent.name == "gun_holder3") time = 6;
@@ -39,16 +38,18 @@ public class shoot : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space) || Save_sys.instance.Auto_Shoot)
-        {
-            Shoot();
-        }
+
+             Shoot();
 
     }
     private void Shoot()
     {
+        if (Input.GetKey(KeyCode.Space))
+            time += Time.deltaTime * ( Attack_speed * 3 + Speed ); 
+        else
+            time += Time.deltaTime * ( Attack_speed + Speed );
+
         Transform barl = transform.GetChild(0);
-        time += Time.deltaTime * ( Attack_speed + Speed );
 
         if (time >= 10)
         {
@@ -64,6 +65,7 @@ public class shoot : MonoBehaviour
             audioSource = GetComponent<AudioSource>();
             audioSource.clip = clip;
             audioSource.Play();
+
         }
     }
 }

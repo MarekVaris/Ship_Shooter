@@ -7,13 +7,14 @@ using UnityEngine.UIElements;
 
 public class Moving : MonoBehaviour
 {
+    public float POWER = 100;
     public float HP = 10;
     public float Speed = 2f;
     public float move_rotate = 2f;
     public game_over_scene GameOver;
     public Hp_Player Ui_Hp_Player;
-    public ParticleSystem Dead_explosion;
-
+    public Power_Player Ui_Power_Player;
+    public ParticleSystem Dead_explosion; 
 
     private GameObject hitted_by;
     private float move_x;
@@ -36,6 +37,8 @@ public class Moving : MonoBehaviour
         }
         else
         {
+            Bonus_Power();
+            
             move_x = Input.GetAxis("Horizontal");
             move_z = Input.GetAxis("Vertical");
             Move();
@@ -105,5 +108,15 @@ public class Moving : MonoBehaviour
             Ui_Hp_Player.Update_Hp(HP);
             Destroy(other.gameObject);
         }
+    }
+    private void Bonus_Power()
+    {
+        POWER -= Time.deltaTime * 10;
+
+        if (POWER > 0)
+        {
+            Ui_Power_Player.Update_Power(POWER);
+        }
+
     }
 }
