@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy_guy: {fileID: 2765880485851863788, guid: 718ac139915e83d468023b8999ae14cd, type: 3}
   spawning_intens: 5
+  Follow: {fileID: 0}
 --- !u!65 &2857572251180032778
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -2087,7 +2087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3716250443f969e43ad2dcf07c6abb0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 0
+  Level: 3
   Points: 0
   Hp: 0
   Speed: 0
@@ -4920,6 +4920,14 @@ PrefabInstance:
       propertyPath: Follow
       value: 
       objectReference: {fileID: 1057082608}
+    - target: {fileID: 213400947914691171, guid: 423f230bc712db444b6dfb4eeec35b41, type: 3}
+      propertyPath: Enemy_Guy
+      value: 
+      objectReference: {fileID: 2765880485851863788, guid: 718ac139915e83d468023b8999ae14cd, type: 3}
+    - target: {fileID: 213400947914691171, guid: 423f230bc712db444b6dfb4eeec35b41, type: 3}
+      propertyPath: Enemy_Guy_Medium
+      value: 
+      objectReference: {fileID: 6867442503679213223, guid: 5b6b93b4cbf78574694f6bfc1a128ac3, type: 3}
     - target: {fileID: 347403065303776505, guid: 423f230bc712db444b6dfb4eeec35b41, type: 3}
       propertyPath: m_Name
       value: spawner

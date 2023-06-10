@@ -5,24 +5,17 @@ using UnityEngine.UI;
 public class health : MonoBehaviour
 {
     public Slider slider;
-    private move_enemy enemy_helth;
-    // Start is called before the first frame update
-    void Start()
+
+    public void Hp_Update(float HP)
     {
-        enemy_helth = GetComponentInParent<move_enemy>();
-        slider.maxValue = enemy_helth.HP;
-        slider.value = enemy_helth.HP;
+        slider.maxValue = HP;
+        slider.value = HP;
         gameObject.SetActive(false);
     }
 
-    void Update()
-    {
-
-    }
-
-    public void Health_bar(float hp)
+    public void Health_bar(float HP)
     {
         gameObject.SetActive (true);
-        slider.value = hp;
+        slider.value = HP;
     }
 }

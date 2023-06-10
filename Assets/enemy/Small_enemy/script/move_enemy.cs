@@ -5,24 +5,21 @@ using UnityEngine;
 
 public class move_enemy : MonoBehaviour
 {
-    public float ver_speed = 3f;
-    public float speed = 2f;
+    public float Ver_Speed = 3f;
+    public float Speed = 2f;
     public float HP = 3f;
     public ParticleSystem explosion;
 
-
-    private GameObject hitted_by;
+    private health Health_Bar;
     private float move_hori = 1f;
-    private int left = 0;
+    private bool left = false;
     private int stop = 0;
-    private health health_bar;
-    Rigidbody rb;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        Health_Bar = GetComponentInChildren<health>();
+        Health_Bar.Hp_Update(HP);
         stop = Random.Range(2, 6);
-        health_bar = GetComponentInChildren<health>();
     }
 
     void Update()
@@ -33,27 +30,27 @@ public class move_enemy : MonoBehaviour
     private void Move()
     {
 
-        if (left == 0)
+        if (left == false)
         {
-            move_hori += Time.deltaTime * 1.2f * ver_speed;
+            move_hori += Time.deltaTime * 1.2f * Ver_Speed;
             if (move_hori > stop)
             {
-                left = 1;
+                left = true;
             }
         }
-        else if (left == 1)
+        else if (left == true)
         {
-            move_hori -= Time.deltaTime * 1.2f * ver_speed;
+            move_hori -= Time.deltaTime * 1.2f * Ver_Speed;
             if (move_hori < -stop)
             {
-                left = 0;
+                left = false;
             }
         }
 
         transform.position = new Vector3(
             transform.position.x + move_hori * Time.deltaTime,
             0,
-            transform.position.z + speed * Time.deltaTime);
+            transform.position.z + Speed * Time.deltaTime);
 
         transform.rotation = new Quaternion(0 , 0, move_hori, -20);
 
@@ -77,7 +74,7 @@ public class move_enemy : MonoBehaviour
         if (other.gameObject.tag == "bullet")
         {
             HP -= other.GetComponent<move_projectile>().Standard_Dmg;
-            health_bar.Health_bar(HP);
+            Health_Bar.Health_bar(HP);
             if (other.gameObject.name != "Sniper_bullet(Clone)")
             {
                 Destroy(other.gameObject);
