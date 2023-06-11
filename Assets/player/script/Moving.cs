@@ -7,14 +7,26 @@ using UnityEngine.UIElements;
 
 public class Moving : MonoBehaviour
 {
-    public float POWER = 100;
     public float HP = 10;
     public float Speed = 2f;
     public float move_rotate = 2f;
     public game_over_scene GameOver;
     public Hp_Player Ui_Hp_Player;
     public Power_Player Ui_Power_Player;
-    public ParticleSystem Dead_explosion; 
+    public ParticleSystem Dead_explosion;
+    
+
+    public float maxPower = 100;
+    public float minPower = 0; 
+
+    private float _power = 100;
+    
+    public float POWER
+    {
+        get { return _power; }
+        set { _power = Mathf.Clamp(value, minPower, maxPower); }
+    }
+
 
     private GameObject hitted_by;
     private float move_x;
@@ -111,7 +123,17 @@ public class Moving : MonoBehaviour
     }
     private void Bonus_Power()
     {
-        POWER -= Time.deltaTime * 10;
+        if (Input.GetKey(KeyCode.Space))
+        {
+            POWER -= Time.deltaTime * 10;
+        }
+        else 
+        {
+            if (POWER <100)
+            {
+                POWER += Time.deltaTime * 2;
+            }
+        }
 
         if (POWER > 0)
         {

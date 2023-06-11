@@ -13,6 +13,8 @@ public class shoot : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip clip;
 
+    public Moving PO;
+
     private int Dmg;
     private int Speed;
     private float time;
@@ -33,21 +35,37 @@ public class shoot : MonoBehaviour
         {
             this.enabled = false;
         }
+
+        PO = FindObjectOfType<Moving>();
     }
 
 
     void Update()
     {
 
-             Shoot();
+        Shoot();
 
     }
     private void Shoot()
     {
+
+        float Power = PO.POWER;
+
         if (Input.GetKey(KeyCode.Space))
-            time += Time.deltaTime * ( Attack_speed * 3 + Speed ); 
+        {
+            if (Power > 0)
+            {
+                time += Time.deltaTime * ( Attack_speed * 3 + Speed ); 
+            }
+            else
+            {
+                time += Time.deltaTime * ( Attack_speed + Speed );
+            }
+        }
         else
+        {
             time += Time.deltaTime * ( Attack_speed + Speed );
+        }
 
         Transform barl = transform.GetChild(0);
 
