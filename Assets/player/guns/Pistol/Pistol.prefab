@@ -133,8 +133,10 @@ MonoBehaviour:
   Attack_speed: 5
   Gun_number: 0
   Projectile: {fileID: 2535965719533648107, guid: a4258886030168f41bbf54047e156b91, type: 3}
+  Particle_Shoot: {fileID: 5666896410421394589, guid: c50cdc766c3d2c44aa91a52419d8186f, type: 3}
   audioSource: {fileID: 0}
   clip: {fileID: 8300000, guid: 6679e3202aa3998468166226756c11ba, type: 3}
+  PO: {fileID: 0}
 --- !u!82 &5377287456185840151
 AudioSource:
   m_ObjectHideFlags: 0

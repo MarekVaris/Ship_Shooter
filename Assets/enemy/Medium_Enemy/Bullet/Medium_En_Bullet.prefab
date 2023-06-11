@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 2146045272165584228}
   - component: {fileID: 3055572892341830337}
   - component: {fileID: 973731975788099083}
+  - component: {fileID: 8236085278964592912}
+  - component: {fileID: 2510539474032189569}
   m_Layer: 0
   m_Name: Medium_En_Bullet
-  m_TagString: Untagged
+  m_TagString: enemy_bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,3 +85,30 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8236085278964592912
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622307840106846174}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.82, y: 1.9999999, z: 10.86}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2510539474032189569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622307840106846174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3246a7090c0e7747862eb472c6227e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  Dmg: 2

@@ -9,11 +9,13 @@ public class shoot : MonoBehaviour
     public float Attack_speed = 5;
     public int Gun_number;
     public GameObject Projectile;
+    public ParticleSystem Particle_Shoot;
+
 
     public AudioSource audioSource;
     public AudioClip clip;
-
     public Moving PO;
+
 
     private int Dmg;
     private int Speed;
@@ -77,6 +79,8 @@ public class shoot : MonoBehaviour
                 barl.transform.position.y,
                 barl.transform.position.z - .35f), new Quaternion(0, 0, 0, 0));
 
+            ParticleSystem Particle_System = Instantiate(Particle_Shoot, barl.transform.position, Particle_Shoot.transform.rotation);
+            Particle_System.Play();
             Shooted.GetComponent<move_projectile>().Projectile_Dmg = Dmg;
             Shooted.transform.SetParent(GameObject.Find("Projectiles").transform);    
             time = 0;

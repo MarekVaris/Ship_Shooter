@@ -166,8 +166,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a6f16bb891d10042a1a10a8fa25a499, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ver_speed: 3
-  speed: 2
+  Ver_Speed: 3
+  Speed: 2
   HP: 3
   explosion: {fileID: 7504790509111286549, guid: fc09b01d0268e8348abbc6f6c43ef88d, type: 3}
 --- !u!114 &8195407719803557803
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Status_Value: 3
-  Add_Points: 10
+  Add_Points: 50
 --- !u!95 &1521239047223011014
 Animator:
   serializedVersion: 5

@@ -116,7 +116,7 @@ public class Moving : MonoBehaviour
         if (other.gameObject.tag == "enemy_bullet" && hitted_by != other.gameObject)
         {
             hitted_by = other.gameObject;
-            HP -= 1;
+            HP -= other.GetComponent<enemy_bullet_movment>().Dmg;
             Ui_Hp_Player.Update_Hp(HP);
             Destroy(other.gameObject);
         }

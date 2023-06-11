@@ -276,6 +276,7 @@ GameObject:
   - component: {fileID: 7997113366412591088}
   - component: {fileID: 2308939753906928478}
   - component: {fileID: 4860181047813216193}
+  - component: {fileID: 1824190184764005535}
   m_Layer: 0
   m_Name: Medium_Enemy
   m_TagString: Untagged
@@ -330,8 +331,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9c75c594fef6b047902180fc89700b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  HP: 3
+  HP: 10
+  Speed: 5
 --- !u!114 &4860181047813216193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -344,8 +345,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcffcb09fce26804f8f220d2d26d5340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Status_Value: 10
+  Status_Value: 6
   Add_Points: 100
+--- !u!114 &1824190184764005535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6867442503679213223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8df2b17ff01c0124b80d3440df2ea8b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy_bullet: {fileID: 1622307840106846174, guid: 3e6a98f4f9f233b4d8cf66f9dad451d2, type: 3}
+  shooting_speed: 5
 --- !u!1001 &622122599716734866
 PrefabInstance:
   m_ObjectHideFlags: 0
