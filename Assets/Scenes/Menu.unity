@@ -2567,7 +2567,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &444397174
 GameObject:
   m_ObjectHideFlags: 0
@@ -5335,7 +5334,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1114099716
 GameObject:
   m_ObjectHideFlags: 0
@@ -9484,7 +9482,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1979166724
 GameObject:
   m_ObjectHideFlags: 0
@@ -9957,7 +9954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3716250443f969e43ad2dcf07c6abb0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 0
+  Level: 3
   Points: 0
   Hp: 0
   Speed: 0

@@ -29,12 +29,10 @@ public class Status_Bar : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.E))
             {
-                Save_sys.instance.Auto_Shoot = false;
                 Timeline.Play();
                 Player.GetComponent<Moving>().enabled = false;
                 Ui_Finish.gameObject.GetComponent<Stats_On_Finish>().Update_Stats();
                 Ui_Finish.SetActive(true);
-                Save_sys.instance.Auto_Shoot = true;
             }
         }
     }
