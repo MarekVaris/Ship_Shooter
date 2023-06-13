@@ -7,7 +7,14 @@ using UnityEngine.UIElements;
 
 public class Moving : MonoBehaviour
 {
+
+    public ImgsFillDynamic ImgsFD_HP;
+    public ImgsFillDynamic ImgsFD_POWER;
+
+
+    private float UI_HP = 1f;
     public float HP = 10;
+    private float MAX_HP;
     public float Speed = 2f;
     public float move_rotate = 2f;
     public game_over_scene GameOver;
@@ -20,6 +27,7 @@ public class Moving : MonoBehaviour
     public float minPower = 0; 
 
     private float _power = 100;
+    private float UI_POWER = 1f;
     
     public float POWER
     {
@@ -36,6 +44,9 @@ public class Moving : MonoBehaviour
 
     void Start()
     {
+        this.ImgsFD_HP.SetValue(1f, false, 2f);
+        this.ImgsFD_POWER.SetValue(1f, false, 2f);
+        MAX_HP = HP;
         HP += 10 * Save_sys.instance.Hp;
         Speed += Save_sys.instance.Speed;
 
@@ -50,7 +61,7 @@ public class Moving : MonoBehaviour
         else
         {
             Bonus_Power();
-            
+
             move_x = Input.GetAxis("Horizontal");
             move_z = Input.GetAxis("Vertical");
             Move();
@@ -117,6 +128,8 @@ public class Moving : MonoBehaviour
         {
             hitted_by = other.gameObject;
             HP -= other.GetComponent<enemy_bullet_movment>().Dmg;
+            UI_HP = UI_HP - (other.GetComponent<enemy_bullet_movment>().Dmg / MAX_HP);
+            this.ImgsFD_HP.SetValue(UI_HP, false, 2f);
             Ui_Hp_Player.Update_Hp(HP);
             Destroy(other.gameObject);
         }
@@ -126,19 +139,23 @@ public class Moving : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             POWER -= Time.deltaTime * 10;
+            UI_POWER = UI_POWER - ((Time.deltaTime * 10) / 100);
         }
         else 
         {
             if (POWER <100)
             {
                 POWER += Time.deltaTime * 2;
+                UI_POWER = UI_POWER + ((Time.deltaTime * 2) / 100);
             }
         }
 
         if (POWER > 0)
         {
             Ui_Power_Player.Update_Power(POWER);
+            this.ImgsFD_POWER.SetValue(UI_POWER, false, 2f);
         }
 
     }
+
 }
