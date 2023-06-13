@@ -27,12 +27,21 @@ public class Moving : MonoBehaviour
     public float minPower = 0; 
 
     private float _power = 100;
-    private float UI_POWER = 1f;
+    private float UI_POWER_1 = 1f;
+
+    public float maxUI_POWER = 1f;
+    public float minUI_POWER = 0f; 
     
     public float POWER
     {
         get { return _power; }
         set { _power = Mathf.Clamp(value, minPower, maxPower); }
+    }
+
+    public float UI_POWER
+    {
+        get { return UI_POWER_1; }
+        set { UI_POWER_1 = Mathf.Clamp(value, minUI_POWER, maxUI_POWER); }
     }
 
 
