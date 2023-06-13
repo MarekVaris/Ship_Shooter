@@ -19,7 +19,7 @@ public class spawning : MonoBehaviour
     private float Medium_Enemy_Timer = 10;
     void Start()
     {
-        
+        spawning_intens += Save_sys.instance.Level;
     }
 
     void Update()
