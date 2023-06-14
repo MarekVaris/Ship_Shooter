@@ -14,6 +14,7 @@ public class Stats_On_Finish : MonoBehaviour
     private float Points;
     private float EnemyKill;
     private float In_game_Time;
+    private float Current_Time;
     private float Current_Points;
     private float Current_EnemyKill;
     private Data_In_Game Data;
@@ -28,13 +29,20 @@ public class Stats_On_Finish : MonoBehaviour
         if (Data)
         {
 
-
+            
+            float Status_T = Mathf.Lerp(Current_Time, In_game_Time, 5 * Time.deltaTime );
             float Status_P = Mathf.Lerp(Current_Points, Points, 5 * Time.deltaTime );
             float Status_E = Mathf.Lerp(Current_EnemyKill, EnemyKill, 5 * Time.deltaTime);
 
+            Current_Time = Status_T;
             Current_Points = Status_P;
             Current_EnemyKill = Status_E;
 
+            float minutes = MathF.Floor(Mathf.Round(Current_Time) / 60);
+            float secounds = MathF.Floor(Mathf.Round(Current_Time) % 60);
+
+
+            Time_Spent.text = minutes+":"+secounds.ToString();
             Points_Earn.text = Math.Round(Current_Points).ToString();
             Enemy_Kill.text = Math.Round(Current_EnemyKill).ToString();
         }
@@ -44,6 +52,7 @@ public class Stats_On_Finish : MonoBehaviour
     {
         Data = GameObject.Find("EventSystem").GetComponent<Data_In_Game>();
 
+        In_game_Time = Data.Timer;
         Points = Data.Points;
         EnemyKill = Data.Enemy_Killed;
         Current_Points = 0;

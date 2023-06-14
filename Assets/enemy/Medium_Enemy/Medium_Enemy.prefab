@@ -334,7 +334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 10
   Speed: 5
-  Expolsion: {fileID: 7504790509111286549, guid: 13b73ee581f140d439377d62996bd8b1, type: 3}
+  Expolsion: {fileID: 7504790509111286549, guid: 60faa6795e68e754e978576dccf0175d, type: 3}
 --- !u!114 &4860181047813216193
 MonoBehaviour:
   m_ObjectHideFlags: 0
