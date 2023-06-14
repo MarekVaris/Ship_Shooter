@@ -7,7 +7,6 @@ using UnityEngine;
 public class Points_Update : MonoBehaviour
 {   
     private float Status = 0;
-
     void Update()
     {
 
