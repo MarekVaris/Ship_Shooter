@@ -12,6 +12,7 @@ public class Status_Bar : MonoBehaviour
     public GameObject Text;
     public GameObject Player;
 
+    private bool Active = true;
     private Slider Slider;
     void Start()
     {
@@ -27,12 +28,14 @@ public class Status_Bar : MonoBehaviour
         {
             Text.SetActive(true);
 
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && Player && Active)
             {
+                Active = false;
                 Timeline.Play();
                 Player.GetComponent<Moving>().enabled = false;
                 Ui_Finish.gameObject.GetComponent<Stats_On_Finish>().Update_Stats();
                 Ui_Finish.SetActive(true);
+                
             }
         }
     }

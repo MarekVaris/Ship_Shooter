@@ -20,7 +20,7 @@ public class enemy_bullet_movment : MonoBehaviour
             transform.position.y,
             transform.position.z + Time.deltaTime * speed);
 
-        if (transform.position.z > 7)
+        if (transform.position.z > 12)
         {
             Destroy(gameObject);
         }
