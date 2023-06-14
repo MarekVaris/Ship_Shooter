@@ -15,12 +15,13 @@ public class Update_Game : MonoBehaviour
     private void Start()
     {
         Slider = GameObject.Find("Status_Bar_value").GetComponent<Slider>();
-        Data = GameObject.Find("EventSystem").GetComponent<Data_In_Game>();
+        
     }
     public void Update_Game_Components_on_dead()
     {
-        Slider.value -= Status_Value;
+        Data = GameObject.Find("EventSystem").GetComponent<Data_In_Game>();
 
+        Slider.value -= Status_Value;
         Data.Points += Add_Points;
         Data.Enemy_Killed += 1;
     }

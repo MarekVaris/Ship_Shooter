@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -41,8 +42,13 @@ public class Medium_Enemy : MonoBehaviour
     {
         if (HP <= 0)
         {
-            Destroy(gameObject);
+            gameObject.GetComponent<Animator>().SetTrigger("Medium_Dead");
         }
+    }
+
+    public void Destroy_Enemy()
+    {
+        Destroy(gameObject);
     }
 
     private void Move_Medium_Enemy()

@@ -65,10 +65,16 @@ public class move_enemy : MonoBehaviour
         if (HP <= 0)
         {
             gameObject.GetComponent<Update_Game>().Update_Game_Components_on_dead();
-            Instantiate(explosion, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            gameObject.GetComponent<Animator>().SetTrigger("Start_Destroy_Animation");
         }
     }
+
+    public void Destroy_Enemy()
+    {
+        Instantiate(explosion, transform.Find("Cube").position, Quaternion.identity);
+        Destroy(gameObject);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "bullet")
