@@ -10,13 +10,7 @@ public class shoot_enemy : MonoBehaviour
     private GameObject Shooted;
     private float time;
     private int swap;
-    // Start is called before the first frame update
-    void Start()
-    {
 
-    }
-
-    // Update is called once per frame
     void Update()
     {
         Shoot();

@@ -1,4 +1,6 @@
 using System;
+using TMPro.EditorUtilities;
+using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -6,6 +8,7 @@ public class Medium_Enemy : MonoBehaviour
 {
     public float HP = 3;
     public float Speed = 5;
+    public ParticleSystem Expolsion;
 
     private GameObject Player_Ship;
     private health Health_Bar;
@@ -41,8 +44,17 @@ public class Medium_Enemy : MonoBehaviour
     {
         if (HP <= 0)
         {
-            Destroy(gameObject);
+            gameObject.GetComponent<Animator>().SetTrigger("Medium_Dead");
+            gameObject.transform.Find("Health").gameObject.SetActive(false);
         }
+    }
+
+    public void Destroy_Enemy()
+    {
+
+        gameObject.GetComponent<Update_Game>().Update_Game_Components_on_dead();
+        Instantiate(Expolsion, transform.Find("Body").position, Quaternion.identity);
+        Destroy(gameObject);
     }
 
     private void Move_Medium_Enemy()
