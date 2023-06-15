@@ -19,6 +19,8 @@ public class Medium_Enemy : MonoBehaviour
 
     void Start()
     {
+        HP += Save_sys.instance.Level * .5f;
+
         Health_Bar = GetComponentInChildren<health>();
         Health_Bar.Hp_Update(HP);
 

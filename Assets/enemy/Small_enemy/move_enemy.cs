@@ -17,8 +17,12 @@ public class move_enemy : MonoBehaviour
 
     void Start()
     {
+        Speed += Save_sys.instance.Level * .2f;
+        HP += Save_sys.instance.Level * .5f;
+
         Health_Bar = GetComponentInChildren<health>();
         Health_Bar.Hp_Update(HP);
+
         stop = Random.Range(2, 6);
     }
 
@@ -87,7 +91,11 @@ public class move_enemy : MonoBehaviour
             {
                 Destroy(other.gameObject);
             }
-
+        }
+        if (other.gameObject.tag == "Player")
+        {
+            other.GetComponentInParent<Moving>().HP -= 5;
+            HP = 0;
         }
     }
 }

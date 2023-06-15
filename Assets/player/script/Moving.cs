@@ -8,29 +8,32 @@ using UnityEngine.UIElements;
 public class Moving : MonoBehaviour
 {
 
-    public ImgsFillDynamic ImgsFD_HP;
-    public ImgsFillDynamic ImgsFD_POWER;
-
-
-    private float UI_HP = 1f;
     public float HP = 10;
-    private float MAX_HP;
-    public float Speed = 2f;
-    public float move_rotate = 2f;
-    public game_over_scene GameOver;
-    public Hp_Player Ui_Hp_Player;
-    public Power_Player Ui_Power_Player;
-    public ParticleSystem Dead_explosion;
-    
 
     public float maxPower = 100;
     public float minPower = 0; 
-
-    private float _power = 100;
-    private float UI_POWER_1 = 1f;
-
     public float maxUI_POWER = 1f;
     public float minUI_POWER = 0f; 
+
+    public float Speed = 2f;
+    public float move_rotate = 2f;
+
+    public game_over_scene GameOver;
+    public Hp_Player Ui_Hp_Player;
+    public Power_Player Ui_Power_Player;
+    public ImgsFillDynamic ImgsFD_HP;
+    public ImgsFillDynamic ImgsFD_POWER;
+    public ParticleSystem Dead_explosion;
+
+    private float UI_HP = 1f;
+    private float MAX_HP;
+    private float _power = 100;
+    private float UI_POWER_1 = 1f;
+    private float move_x;
+    private float move_z;
+    private float move_hori = 0.1f;
+    private float move_ver = 0.1f;
+    private GameObject hitted_by;
     
     public float POWER
     {
@@ -43,13 +46,6 @@ public class Moving : MonoBehaviour
         get { return UI_POWER_1; }
         set { UI_POWER_1 = Mathf.Clamp(value, minUI_POWER, maxUI_POWER); }
     }
-
-
-    private GameObject hitted_by;
-    private float move_x;
-    private float move_z;
-    private float move_hori = 0.1f;
-    private float move_ver = 0.1f;
 
     void Start()
     {
@@ -75,7 +71,6 @@ public class Moving : MonoBehaviour
             move_z = Input.GetAxis("Vertical");
             Move();
         }
-        
     }
 
     private void Move()
@@ -138,11 +133,17 @@ public class Moving : MonoBehaviour
             hitted_by = other.gameObject;
             HP -= other.GetComponent<enemy_bullet_movment>().Dmg;
             UI_HP = UI_HP - (other.GetComponent<enemy_bullet_movment>().Dmg / MAX_HP);
-            this.ImgsFD_HP.SetValue(UI_HP, false, 2f);
-            Ui_Hp_Player.Update_Hp(HP);
+            ImgsFD_HP.SetValue(UI_HP, false, 2f);
             Destroy(other.gameObject);
         }
+        else if ( other.gameObject.tag == "Enemy")
+        {
+            UI_HP = UI_HP - (5 / MAX_HP);
+            ImgsFD_HP.SetValue(UI_HP, false, 2f);
+        }
+
     }
+
     private void Bonus_Power()
     {
         if (Input.GetKey(KeyCode.Space))

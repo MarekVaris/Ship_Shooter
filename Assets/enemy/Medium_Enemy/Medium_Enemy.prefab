@@ -275,8 +275,8 @@ GameObject:
   - component: {fileID: 6054489636125254685}
   - component: {fileID: 7997113366412591088}
   - component: {fileID: 2308939753906928478}
-  - component: {fileID: 4860181047813216193}
   - component: {fileID: 1824190184764005535}
+  - component: {fileID: 4860181047813216193}
   - component: {fileID: 6259477473582598054}
   m_Layer: 0
   m_Name: Medium_Enemy
@@ -332,23 +332,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9c75c594fef6b047902180fc89700b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 10
+  HP: 15
   Speed: 5
   Expolsion: {fileID: 7504790509111286549, guid: 60faa6795e68e754e978576dccf0175d, type: 3}
---- !u!114 &4860181047813216193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6867442503679213223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcffcb09fce26804f8f220d2d26d5340, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Status_Value: 6
-  Add_Points: 100
 --- !u!114 &1824190184764005535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,6 +349,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy_bullet: {fileID: 1622307840106846174, guid: 3e6a98f4f9f233b4d8cf66f9dad451d2, type: 3}
   shooting_speed: 5
+--- !u!114 &4860181047813216193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6867442503679213223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcffcb09fce26804f8f220d2d26d5340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Status_Value: 6
+  Add_Points: 100
 --- !u!95 &6259477473582598054
 Animator:
   serializedVersion: 5

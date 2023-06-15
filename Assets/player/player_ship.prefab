@@ -4860,7 +4860,7 @@ GameObject:
   - component: {fileID: 3720530796954604828}
   m_Layer: 0
   m_Name: player_ship
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4931,12 +4931,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 262b556ff4fa276469a04e1d9026ca5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ImgsFD_HP: {fileID: 0}
+  ImgsFD_POWER: {fileID: 0}
   HP: 10
   Speed: 3
   move_rotate: 2
   GameOver: {fileID: 0}
   Ui_Hp_Player: {fileID: 0}
+  Ui_Power_Player: {fileID: 0}
   Dead_explosion: {fileID: 8858021312709762210, guid: 49925c26966a48e40870e1ff9c8ac8e9, type: 3}
+  maxPower: 100
+  minPower: 0
+  maxUI_POWER: 1
+  minUI_POWER: 0
 --- !u!114 &7802795446137880993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5105,6 +5112,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a365c5a7d1691dc458276bd28d94d4d8, type: 3}
       propertyPath: m_Name
       value: player
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a365c5a7d1691dc458276bd28d94d4d8, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a365c5a7d1691dc458276bd28d94d4d8, type: 3}

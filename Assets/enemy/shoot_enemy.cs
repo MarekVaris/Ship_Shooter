@@ -11,6 +11,11 @@ public class shoot_enemy : MonoBehaviour
     private float time;
     private int swap;
 
+    private void Start()
+    {
+        shooting_speed += Save_sys.instance.Level * .3f;
+    }
+
     void Update()
     {
         Shoot();
