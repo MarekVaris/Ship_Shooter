@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 683d2c9cd85b1f047a49ef751deaaf21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 15
+  Speed: 30
   Standard_Dmg: 5
   Projectile_Dmg: 5
 --- !u!65 &4659444277168052280
@@ -62,7 +62,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.52, z: 3}
+  m_Size: {x: 0.25, y: 0.52, z: 1.2}
   m_Center: {x: 0, y: 0.2, z: 0}
 --- !u!1 &6392972873045284813
 GameObject:

@@ -38,6 +38,21 @@ public class Shop_Gun_Update : MonoBehaviour
                     Text.text = gameObject.name;
                 }
             }
+            else if (gameObject.name == "Rifle")
+            {
+                if (Gun.name == "Rifle")
+                {
+                    Button.interactable = true;
+                    Text_Price.SetActive(false);
+                    Text.text = "Sell";
+                }
+                else
+                {
+                    Text_Price.SetActive(true);
+                    Button.interactable = false;
+                    Text.text = gameObject.name;
+                }
+            }
             else if (gameObject.name == "Sniper")
             {
                 if(Gun.name == gameObject.name)
@@ -59,6 +74,7 @@ public class Shop_Gun_Update : MonoBehaviour
         {
             if (gameObject.name == "Pistol") Price = 200;
             else if (gameObject.name == "Sniper") Price = 400;
+            else if (gameObject.name == "Rifle") Price = 300;
 
             if (Save_sys.instance.Points < Price) Button.interactable = false;
             else Button.interactable = true;

@@ -56,6 +56,12 @@ public class Shop_Button_Update : MonoBehaviour
                 Base_Price = 100;
                 Upgrade_Price = 100 * Upgrade_Status;
             }
+            else if (Save_sys.instance.Gun_Saved[Gun_Pos].name == "Rifle")
+            {
+                Base_Price = 100;
+                Upgrade_Price = 100 * Upgrade_Status;
+
+            }
             else if (Save_sys.instance.Gun_Saved[Gun_Pos].name == "Sniper")
             {
                 Base_Price = 200;
