@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -63,6 +60,12 @@ public class Shop_Button_Update : MonoBehaviour
 
             }
             else if (Save_sys.instance.Gun_Saved[Gun_Pos].name == "Sniper")
+            {
+                Base_Price = 200;
+                Upgrade_Price = 200 * Upgrade_Status;
+
+            }
+            else if (Save_sys.instance.Gun_Saved[Gun_Pos].name == "BumGun")
             {
                 Base_Price = 200;
                 Upgrade_Price = 200 * Upgrade_Status;

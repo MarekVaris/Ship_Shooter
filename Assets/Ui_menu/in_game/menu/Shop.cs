@@ -100,6 +100,12 @@ public class Shop : MonoBehaviour
                 for (int i = 1; Save_sys.instance.Attack_Speed[Current_gun] + 1 > i; i++) Sum += 200 * i;
                 Save_sys.instance.Points += Sum + 400;
             }
+            else if (Gun_Object.name == "BumGun")
+            {
+                for (int i = 1; Save_sys.instance.Dmg[Current_gun] + 1 > i; i++) Sum += 200 * i;
+                for (int i = 1; Save_sys.instance.Attack_Speed[Current_gun] + 1 > i; i++) Sum += 200 * i;
+                Save_sys.instance.Points += Sum + 500;
+            }
 
             Save_sys.instance.Gun_Saved[Current_gun] = null;
             Save_sys.instance.Dmg[Current_gun] = 0;
@@ -113,6 +119,7 @@ public class Shop : MonoBehaviour
             if (Gun_Object.name == "Pistol") Save_sys.instance.Points -= 200;
             else if (Gun_Object.name == "Rifle") Save_sys.instance.Points -= 300;
             else if (Gun_Object.name == "Sniper") Save_sys.instance.Points -= 400;
+            else if (Gun_Object.name == "BumGun") Save_sys.instance.Points -= 500;
             Save_sys.instance.Gun_Saved[Current_gun] = Gun_Object;
         }
         Save_sys.instance.Save();

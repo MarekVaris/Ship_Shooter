@@ -68,13 +68,29 @@ public class Shop_Gun_Update : MonoBehaviour
                     Text.text = gameObject.name;
                 }
             }
+            else if (gameObject.name == "BumGun")
+            {
+                if (Gun.name == gameObject.name)
+                {
+                    Text_Price.SetActive(false);
+                    Button.interactable = true;
+                    Text.text = "Sell";
+                }
+                else
+                {
+                    Text_Price.SetActive(true);
+                    Button.interactable = false;
+                    Text.text = gameObject.name;
+                }
+            }
             else Button.interactable = false;
         }
         else
         {
             if (gameObject.name == "Pistol") Price = 200;
-            else if (gameObject.name == "Sniper") Price = 400;
             else if (gameObject.name == "Rifle") Price = 300;
+            else if (gameObject.name == "Sniper") Price = 400;
+            else if (gameObject.name == "BumGun") Price = 500;
 
             if (Save_sys.instance.Points < Price) Button.interactable = false;
             else Button.interactable = true;

@@ -18,6 +18,8 @@ public class Moving : MonoBehaviour
     public float Speed = 2f;
     public float move_rotate = 2f;
 
+    public bool Active_Guns = false;
+
     public game_over_scene GameOver;
     public Hp_Player Ui_Hp_Player;
     public Power_Player Ui_Power_Player;
@@ -168,4 +170,8 @@ public class Moving : MonoBehaviour
 
     }
 
+    public void Activate_Guns()
+    {
+        Active_Guns = true;
+    }
 }

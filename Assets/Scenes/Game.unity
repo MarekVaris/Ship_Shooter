@@ -1768,7 +1768,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 801635460}
-  m_LocalRotation: {x: 0.26298514, y: 0.3307353, z: -0.09651544, w: 0.9011869}
+  m_LocalRotation: {x: 0.2629851, y: 0.3307353, z: -0.09651543, w: 0.9011869}
   m_LocalPosition: {x: -2.18, y: 2.15, z: 0.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2350,13 +2350,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3716250443f969e43ad2dcf07c6abb0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 5
+  Level: 0
   Points: 0
   Hp: 0
   Speed: 0
   Gun_Saved:
   - {fileID: 5047427540749439976, guid: 871fe1ffbe5447745813c40872904d72, type: 3}
-  - {fileID: 4979118908352466068, guid: ee0332da3d16c6548bdc752fb6e1fb46, type: 3}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   Dmg: 00000000000000000000000000000000
@@ -3250,6 +3250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Points: 0
   Enemy_Killed: 0
+  Timer: 0
 --- !u!1 &1337823556 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4904626227333975842, guid: 30cbc1926b046494288562460639f898, type: 3}

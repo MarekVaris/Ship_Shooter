@@ -15,7 +15,6 @@ public class shoot : MonoBehaviour
     public AudioClip clip;
     public Moving PO;
 
-
     private int Dmg;
     private int Speed;
     private float time;
@@ -43,8 +42,10 @@ public class shoot : MonoBehaviour
 
     void Update()
     {
-
-        Shoot();
+        if (transform.parent.parent.parent.GetComponent<Moving>().Active_Guns)
+        {
+            Shoot();
+        }
 
     }
     private void Shoot()

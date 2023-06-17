@@ -85,11 +85,19 @@ public class move_enemy : MonoBehaviour
     {
         if (other.gameObject.tag == "bullet")
         {
-            HP -= other.GetComponent<move_projectile>().Standard_Dmg;
-            Health_Bar.Health_bar(HP);
-            if (other.gameObject.name != "Sniper_bullet(Clone)")
+            if (other.gameObject.name == "BumGun_bullet")
             {
-                Destroy(other.gameObject);
+                HP -= other.transform.parent.GetComponent<move_projectile>().Standard_Dmg;
+                Health_Bar.Health_bar(HP);
+            }
+            else
+            {
+                HP -= other.GetComponent<move_projectile>().Standard_Dmg;
+                Health_Bar.Health_bar(HP);
+                if (other.gameObject.name != "Sniper_bullet(Clone)")
+                {
+                    Destroy(other.gameObject);
+                }
             }
         }
         if (other.gameObject.tag == "Player")
