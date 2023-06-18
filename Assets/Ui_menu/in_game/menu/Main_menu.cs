@@ -8,6 +8,7 @@ public class Main_menu : MonoBehaviour
     public Animator Camera_animation;
     public Animator Ui_MainMenu;
     public Animator Ui_Shop;
+    public GameObject Options_UI;
 
     public void Start()
     {
@@ -33,14 +34,24 @@ public class Main_menu : MonoBehaviour
 
     public void Settings()
     {
-
+        gameObject.SetActive(false);
+        Options_UI.SetActive(true);
     }
+
+    public void Exit_settings()
+    {
+        Options_UI.SetActive(false);
+        gameObject.SetActive(true);
+    }
+
     public void Empty()
     {
 
     }
+
     public void Quit()
     {
         Application.Quit();
     }
+
 }

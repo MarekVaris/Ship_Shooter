@@ -10,6 +10,7 @@ public class Save_sys : MonoBehaviour
     //Game
     public int Level;
     public int Points;
+    public float Valume_settings;
 
     // Body Upgrade
     public int Hp;
@@ -29,6 +30,7 @@ public class Save_sys : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
         Load();
+        AudioListener.volume = Save_sys.instance.Valume_settings;
     }
 
     public void Save(int current_gun = 0)
@@ -36,6 +38,7 @@ public class Save_sys : MonoBehaviour
         string filePath = Application.dataPath + "/Save_system/player_data.json";
         Player_Data data = new Player_Data();
 
+        data.Valume_settings = Valume_settings;
         data.Level = Level;
         data.Points = Points;   
         data.Hp = Hp;
@@ -56,6 +59,7 @@ public class Save_sys : MonoBehaviour
             string jsonData = File.ReadAllText(filePath);
             Player_Data data = JsonUtility.FromJson<Player_Data>(jsonData);
 
+            Valume_settings = data.Valume_settings;
             Level = data.Level;
             Points = data.Points;
             Hp = data.Hp;
@@ -70,6 +74,7 @@ public class Save_sys : MonoBehaviour
 [Serializable]
 class Player_Data
 {
+    public float Valume_settings;
     public int Level;
     public int Points;
     public int Hp;
