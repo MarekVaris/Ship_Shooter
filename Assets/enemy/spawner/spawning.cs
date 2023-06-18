@@ -20,7 +20,7 @@ public class spawning : MonoBehaviour
     private float Max_Intens = 15;
     void Start()
     {
-        spawning_intens += Save_sys.instance.Level;
+        spawning_intens += Save_sys.instance.Level * 1.5f;
 
         if (Max_Intens < spawning_intens) spawning_intens = Max_Intens;
     }

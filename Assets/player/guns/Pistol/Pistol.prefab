@@ -25,8 +25,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4702068927858728157}
-  m_LocalRotation: {x: -0, y: 0.7071064, z: -0, w: 0.7071072}
-  m_LocalPosition: {x: 0.01, y: 1.9488789, z: 2.649}
+  m_LocalRotation: {x: -0, y: 0.70710707, z: -0, w: 0.70710653}
+  m_LocalPosition: {x: 0.010850191, y: 1.9488789, z: 2.6436052}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ff8fbd56bb5996a45bd4c209472f4ec9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -92,8 +92,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5568630808892442962}
-  - component: {fileID: 8626845178777094640}
-  - component: {fileID: 5377287456185840151}
+  - component: {fileID: -1259474190032907737}
+  - component: {fileID: 3510308138384268343}
   m_Layer: 0
   m_Name: Pistol
   m_TagString: Untagged
@@ -115,11 +115,11 @@ Transform:
   m_Children:
   - {fileID: 8734281388580770359}
   - {fileID: 1655016517197034632}
-  - {fileID: 3889293125320865469}
+  - {fileID: 2096612097765184371}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8626845178777094640
+--- !u!114 &-1259474190032907737
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,13 +131,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb692414698d3fe4aa34a2f3c3ad5e49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Attack_speed: 3
+  Attack_speed: 4
   Gun_number: 0
   Projectile: {fileID: 2535965719533648107, guid: a4258886030168f41bbf54047e156b91, type: 3}
   audioSource: {fileID: 0}
   clip: {fileID: 8300000, guid: 6679e3202aa3998468166226756c11ba, type: 3}
   PO: {fileID: 0}
---- !u!82 &5377287456185840151
+--- !u!82 &3510308138384268343
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,7 +149,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.35
+  m_Volume: 0.111
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -258,8 +258,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8679653450421821625}
-  m_LocalRotation: {x: -0, y: 0.7071064, z: -0, w: 0.7071072}
-  m_LocalPosition: {x: 0.009154649, y: 0, z: -0.0046048164}
+  m_LocalRotation: {x: -0, y: 0.70710707, z: -0, w: 0.70710653}
+  m_LocalPosition: {x: 0.01, y: 0, z: -0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -294,7 +294,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ff8fbd56bb5996a45bd4c209472f4ec9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -316,7 +316,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1001 &2452937430389881418
+--- !u!1001 &786924308741955460
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -337,11 +337,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1725757053134933239, guid: c50cdc766c3d2c44aa91a52419d8186f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.957
+      value: 1.87
       objectReference: {fileID: 0}
     - target: {fileID: 1725757053134933239, guid: c50cdc766c3d2c44aa91a52419d8186f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.61
+      value: 2.7
       objectReference: {fileID: 0}
     - target: {fileID: 1725757053134933239, guid: c50cdc766c3d2c44aa91a52419d8186f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -371,18 +371,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5666896410421394589, guid: c50cdc766c3d2c44aa91a52419d8186f, type: 3}
-      propertyPath: looping
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5666896410421394589, guid: c50cdc766c3d2c44aa91a52419d8186f, type: 3}
-      propertyPath: stopAction
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c50cdc766c3d2c44aa91a52419d8186f, type: 3}
---- !u!4 &3889293125320865469 stripped
+--- !u!4 &2096612097765184371 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1725757053134933239, guid: c50cdc766c3d2c44aa91a52419d8186f, type: 3}
-  m_PrefabInstance: {fileID: 2452937430389881418}
+  m_PrefabInstance: {fileID: 786924308741955460}
   m_PrefabAsset: {fileID: 0}

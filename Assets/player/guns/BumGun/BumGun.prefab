@@ -4932,7 +4932,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ff8fbd56bb5996a45bd4c209472f4ec9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5015,7 +5015,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ff8fbd56bb5996a45bd4c209472f4ec9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5085,7 +5085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb692414698d3fe4aa34a2f3c3ad5e49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Attack_speed: 5
+  Attack_speed: 4
   Gun_number: 0
   Projectile: {fileID: 5380432038483731703, guid: fd8158b08c8d87442b7e77e87545e6b6, type: 3}
   audioSource: {fileID: 0}

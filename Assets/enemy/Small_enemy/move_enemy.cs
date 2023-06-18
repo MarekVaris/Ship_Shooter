@@ -19,7 +19,7 @@ public class move_enemy : MonoBehaviour
 
     void Start()
     {
-        HP += Save_sys.instance.Level * .5f;
+        HP += Save_sys.instance.Level * .8f;
         Speed += Save_sys.instance.Level * .2f;
 
         if (Max_Speed < Speed) Speed = Max_Speed;
