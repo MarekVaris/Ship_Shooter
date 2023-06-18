@@ -11,14 +11,19 @@ public class move_enemy : MonoBehaviour
     public ParticleSystem explosion;
 
     private health Health_Bar;
+    private float Max_Speed = 4;
+    private float Max_Hp = 15;
     private float move_hori = 1f;
     private bool left = false;
     private int stop = 0;
 
     void Start()
     {
-        Speed += Save_sys.instance.Level * .2f;
         HP += Save_sys.instance.Level * .5f;
+        Speed += Save_sys.instance.Level * .2f;
+
+        if (Max_Speed < Speed) Speed = Max_Speed;
+        if (Max_Hp < HP) HP = Max_Hp;
 
         Health_Bar = GetComponentInChildren<health>();
         Health_Bar.Hp_Update(HP);

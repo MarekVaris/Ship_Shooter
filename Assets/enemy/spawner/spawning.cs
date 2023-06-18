@@ -17,9 +17,12 @@ public class spawning : MonoBehaviour
     private float random_z;
     private float Small_Enemy_Timer = 10;
     private float Medium_Enemy_Timer = 10;
+    private float Max_Intens = 15;
     void Start()
     {
         spawning_intens += Save_sys.instance.Level;
+
+        if (Max_Intens < spawning_intens) spawning_intens = Max_Intens;
     }
 
     void Update()

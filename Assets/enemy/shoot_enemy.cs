@@ -8,12 +8,16 @@ public class shoot_enemy : MonoBehaviour
     public float shooting_speed = 5f;
 
     private GameObject Shooted;
+    private float Max_SSpeed = 7;
     private float time;
     private int swap;
 
     private void Start()
     {
         shooting_speed += Save_sys.instance.Level * .3f;
+
+        if (Max_SSpeed < shooting_speed) shooting_speed = Max_SSpeed;
+
     }
 
     void Update()

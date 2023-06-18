@@ -12,6 +12,7 @@ public class Medium_Enemy : MonoBehaviour
 
     private GameObject Player_Ship;
     private health Health_Bar;
+    private float Max_Hp = 30;
     private float Distance = 1;
     private float Random_Dis;
     private float Random_Speed;
@@ -20,6 +21,8 @@ public class Medium_Enemy : MonoBehaviour
     void Start()
     {
         HP += Save_sys.instance.Level * .5f;
+
+        if (Max_Hp < HP) HP = Max_Hp;
 
         Health_Bar = GetComponentInChildren<health>();
         Health_Bar.Hp_Update(HP);
@@ -83,13 +86,20 @@ public class Medium_Enemy : MonoBehaviour
     {
         if (other.gameObject.tag == "bullet")
         {
-            HP -= other.GetComponent<move_projectile>().Standard_Dmg;
-            Health_Bar.Health_bar(HP);
-            if (other.gameObject.name != "Sniper_bullet(Clone)")
+            if (other.gameObject.name == "BumGun_bullet")
             {
-                Destroy(other.gameObject);
+                HP -= other.transform.parent.GetComponent<move_projectile>().Standard_Dmg;
+                Health_Bar.Health_bar(HP);
             }
-
+            else
+            {
+                HP -= other.GetComponent<move_projectile>().Standard_Dmg;
+                Health_Bar.Health_bar(HP);
+                if (other.gameObject.name != "Sniper_bullet(Clone)")
+                {
+                    Destroy(other.gameObject);
+                }
+            }
         }
     }
 }
