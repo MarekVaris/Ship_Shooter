@@ -10358,7 +10358,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1978764745}
   m_LocalRotation: {x: 0.1744256, y: -0.15644592, z: 0.00687347, w: 0.97213846}
-  m_LocalPosition: {x: 0, y: 0, z: -4.7040005}
+  m_LocalPosition: {x: 0, y: 0, z: -4.704}
   m_LocalScale: {x: 0.01, y: 0.010000001, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10373,7 +10373,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 19.955, y: -18.727, z: -2.513}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 37618.414, y: -24489.855}
+  m_AnchoredPosition: {x: -3.741, y: 1.274}
   m_SizeDelta: {x: 211.03, y: 263.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1978764750
@@ -10889,7 +10889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Level: 0
   Points: 0
-  Valume_settings: 0
+  Valume_settings: 1
   Hp: 0
   Speed: 0
   Gun_Saved:
